@@ -7,8 +7,8 @@ export default function HomePage() {
       </h1>
 
       <p className="text-xl md:text-2xl max-w-2xl mb-8 text-gray-300">
-        The fantasy sports league for movies.
-        Draft films. Compete with friends. Win based on real box office performance.
+        The World's First Fantasy Film League Platform. 
+        Lights. Camera. Draft.
       </p>
 
       <p className="text-lg text-gray-400 mb-10">
