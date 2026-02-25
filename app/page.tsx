@@ -22,7 +22,7 @@ export default function HomePage() {
 
       {/* Description */}
       <p className="text-xl md:text-2xl max-w-2xl mb-6 text-gray-300 font-light animate-fadeUp delay-300">
-        The World's First Fantasy Film League Platform.
+        The world's first fantasy film league platform.
       </p>
 
       {/* Tagline */}
