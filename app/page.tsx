@@ -14,7 +14,7 @@ export default function HomePage() {
         width={650}
         height={250}
         priority
-        className="mb-14 drop-shadow-[0_0_70px_rgba(255,255,255,0.9)] animate-fadeUp"
+        className="mb-14 drop-shadow-[0_0_70px_rgba(255,255,255,0.9)] animate-logoZoom"
       />
 
       {/* Headline */}
