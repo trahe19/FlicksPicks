@@ -26,21 +26,21 @@ export default function HomePage() {
       />
 
       {/* Description */}
-      <p className="text-3xl md:text-4xl max-w-3xl mb-6 text-gray-300 font-[var(--font-bebas)] tracking-widest uppercase animate-fadeUp delay-300">
-        The world's first fantasy film league platform.
-      </p>
+      <p className="text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 font-[var(--font-oswald)] tracking-widest uppercase animate-fadeUp delay-300">
+  The world's first fantasy film league platform.
+</p>
 
       {/* Tagline */}
-      <p className="text-4xl md:text-5xl mb-14 font-[var(--font-bebas)] tracking-[0.2em] uppercase">
-        <span className="cinematic-text">Lights.</span>{" "}
-        <span className="cinematic-text delay-400">Camera.</span>{" "}
-        <span className="cinematic-text delay-800">Draft.</span>
-      </p>
+  <p className="text-4xl md:text-6xl mb-14 font-[var(--font-orbitron)] tracking-[0.3em] uppercase neon-text">
+  <span className="cinematic-text">Lights.</span>{" "}
+  <span className="cinematic-text delay-400">Camera.</span>{" "}
+  <span className="cinematic-text delay-800">Draft.</span>
+</p>
 
       {/* CTA */}
       <a
         href="/join"
-        className="bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest font-[var(--font-anton)] hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(255,255,255,0.5)] animate-fadeUp delay-700"
+      className="bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest font-[var(--font-oswald)] hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] animate-fadeUp delay-700"
       >
         Join the Waitlist
       </a>
