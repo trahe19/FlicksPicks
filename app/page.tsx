@@ -6,14 +6,13 @@ export default function HomePage() {
         FlicksPicks
       </h1>
 
-      <p className="text-xl md:text-2xl max-w-2xl mb-8 text-gray-300">
-        The World's First Fantasy Film League Platform. 
-        Lights. Camera. Draft.
-      </p>
+<p className="text-xl md:text-2xl max-w-2xl mb-6 font-[var(--font-monoton)] text-gray-300">
+  The World's First Fantasy Film League Platform.
+</p>
 
-      <p className="text-lg text-gray-400 mb-10">
-        Coming Soon.
-      </p>
+<p className="text-2xl md:text-3xl mb-10 font-[var(--font-monoton)] text-white">
+  Lights. Camera. Draft.
+</p>
 
       <a
         href="/join"
