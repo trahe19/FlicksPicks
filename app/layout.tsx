@@ -14,7 +14,6 @@ const monoton = Monoton({
 })
 
 export const metadata = {
-  title: "FlicksPicks",
   description: "The World's First Fantasy Film League Platform",
   icons: {
     icon: [
