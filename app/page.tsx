@@ -1,39 +1,27 @@
-'use client'
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 text-center">
+      
+      <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        FlicksPicks
+      </h1>
 
-import { useAuth } from '../contexts/AuthContext'
-import LandingPage from '../components/LandingPage'
-import UserDashboard from '../components/UserDashboard'
+      <p className="text-xl md:text-2xl max-w-2xl mb-8 text-gray-300">
+        The World's First Fantasy Film League Platform. 
+        Lights. Camera. Draft.
+      </p>
 
-export default function Home() {
-  const { user, loading, setUser } = useAuth()
+      <p className="text-lg text-gray-400 mb-10">
+        Coming Soon.
+      </p>
 
-  const handleLogin = (loggedInUser: any) => {
-    setUser(loggedInUser)
-  }
+      <a
+        href="/join"
+        className="bg-white text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:opacity-90 transition"
+      >
+        Join the Waitlist
+      </a>
 
-  const handleLogout = () => {
-    setUser(null)
-  }
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center">
-          <img src="/images/logo.png" alt="Fantasy Flix" className="w-24 h-24 mx-auto mb-8 animate-pulse object-contain" style={{aspectRatio: '1/1'}} />
-          <div className="flex items-center justify-center space-x-2">
-            <div className="w-3 h-3 bg-amber-400 rounded-full animate-bounce"></div>
-            <div className="w-3 h-3 bg-red-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-3 h-3 bg-amber-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-          </div>
-          <p className="text-white/60 mt-4 text-sm">Loading the experience...</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (!user) {
-    return <LandingPage onLogin={handleLogin} />
-  }
-
-  return <UserDashboard user={user} onLogout={handleLogout} />
+    </main>
+  );
 }

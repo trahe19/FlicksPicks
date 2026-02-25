@@ -1,26 +1,14 @@
 import './globals.css'
-import { Poppins, JetBrains_Mono } from 'next/font/google'
-import { AuthProvider } from '../contexts/AuthContext'
+import { Poppins } from 'next/font/google'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins'
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-mono'
+  weight: ['400', '600', '700'],
 })
 
 export const metadata = {
-  title: "Fantasy Flix",
-  description: 'The ultimate fantasy movie league. Draft blockbusters, predict box office success, and compete for the championship.',
-  icons: {
-    icon: '/logo-sleek.svg',
-    apple: '/logo-sleek.svg',
-  },
+  title: "FlicksPicks",
+  description: "The fantasy sports league for movies. Draft films. Compete with friends. Win based on real box office performance.",
 }
 
 export default function RootLayout({
@@ -30,10 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${jetbrainsMono.variable} font-sans`}>
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+      <body className={`${poppins.className} bg-black text-white`}>
+        {children}
       </body>
     </html>
   )

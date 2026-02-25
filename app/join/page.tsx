@@ -7,7 +7,7 @@ export default function JoinPage() {
 
       <div className="w-full max-w-4xl bg-white rounded-2xl shadow-xl overflow-hidden">
         <iframe
-          src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/https://forms.gle/w3PmWVSuzC5BmSSw5/viewform?embedded=true"
           width="100%"
           height="900"
           className="border-0"
