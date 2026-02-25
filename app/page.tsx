@@ -3,14 +3,17 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden text-white">
-{/* Curtains */}
-<div className="curtain-left" />
-<div className="curtain-right" />
+
+      {/* Curtains */}
+      <div className="curtain-left" />
+      <div className="curtain-right" />
+
       {/* Film flash effect */}
-<div className="film-flash" />
+      <div className="film-flash" />
+
       {/* Cinematic spotlight */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none" />
-      <div className="absolute inset-0 pointer-events-none spotlight" />
+      <div className="absolute inset-0 pointer-events-none spotlight-sweep" />
 
       {/* Logo */}
       <Image
@@ -19,23 +22,25 @@ export default function HomePage() {
         width={650}
         height={250}
         priority
-       className="mb-14 animate-logoZoom mix-blend-screen drop-shadow-[0_0_60px_rgba(255,255,255,0.8)]"
+        className="mb-14 animate-logoZoom mix-blend-screen drop-shadow-[0_0_60px_rgba(255,255,255,0.8)]"
       />
+
       {/* Description */}
-      <p className="text-2xl md:text-3xl max-w-2xl mb-6 text-gray-300 font-[var(--font-bebas)] tracking-wider animate-fadeUp delay-300">
+      <p className="text-3xl md:text-4xl max-w-3xl mb-6 text-gray-300 font-[var(--font-bebas)] tracking-widest uppercase animate-fadeUp delay-300">
         The world's first fantasy film league platform.
       </p>
 
-<p className="text-3xl md:text-4xl mb-14 font-[var(--font-monoton)] tracking-widest">
-  <span className="cinematic-text">Lights.</span>{" "}
-  <span className="cinematic-text delay-400">Camera.</span>{" "}
-  <span className="cinematic-text delay-800">Draft.</span>
-</p>
+      {/* Tagline */}
+      <p className="text-4xl md:text-5xl mb-14 font-[var(--font-bebas)] tracking-[0.2em] uppercase">
+        <span className="cinematic-text">Lights.</span>{" "}
+        <span className="cinematic-text delay-400">Camera.</span>{" "}
+        <span className="cinematic-text delay-800">Draft.</span>
+      </p>
 
       {/* CTA */}
       <a
         href="/join"
-        className="bg-white text-black px-14 py-5 rounded-full text-xl tracking-wider font-[var(--font-anton)] hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(255,255,255,0.5)] animate-fadeUp delay-700"
+        className="bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest font-[var(--font-anton)] hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(255,255,255,0.5)] animate-fadeUp delay-700"
       >
         Join the Waitlist
       </a>
