@@ -119,3 +119,19 @@ body::after {
     transform: translateY(0);
   }
 }
+
+/* Film burn flash */
+.film-flash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  animation: filmFlash 0.4s ease-out;
+  pointer-events: none;
+  z-index: 40;
+}
+
+@keyframes filmFlash {
+  0% { opacity: 0.7; }
+  100% { opacity: 0; }
+}
