@@ -4,14 +4,14 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 text-center">
 
-      <Image
-        src="/fp-wordmark.png"
-        alt="FlicksPicks Logo"
-        width={600}
-        height={200}
-        priority
-        className="mb-10"
-      />
+<Image
+  src="/fp-wordmark.png"
+  alt="FlicksPicks Logo"
+  width={600}
+  height={200}
+  priority
+  className="mb-10 drop-shadow-[0_0_35px_rgba(255,255,255,0.8)]"
+/>
 
       <h1 className="text-5xl md:text-6xl font-[var(--font-plaster)] mb-6">
         FlicksPicks
