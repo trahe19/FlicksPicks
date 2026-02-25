@@ -84,34 +84,40 @@ body::after {
   from { transform: translateX(0); }
   to { transform: translateX(100%); }
 }
-/* Slow cinematic spotlight sweep */
+/* Fixed cinematic spotlight sweep */
 .spotlight-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   background: radial-gradient(
     circle at 20% 50%,
-    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.07),
     transparent 60%
   );
-  animation: spotlightMove 14s ease-in-out infinite alternate;
+  background-size: 200% 200%;
+  animation: spotlightMove 18s ease-in-out infinite alternate;
 }
 
 @keyframes spotlightMove {
   0% {
-    background-position: 20% 50%;
+    background-position: 0% 50%;
   }
   100% {
-    background-position: 80% 50%;
+    background-position: 100% 50%;
   }
 }
-/* Cinematic staggered text reveal */
+/* Cinematic staggered text reveal AFTER curtains */
 .cinematic-text {
   display: inline-block;
   opacity: 0;
   transform: translateY(10px);
   animation: cinematicFade 0.8s ease-out forwards;
+  animation-delay: 2.2s; /* waits until curtains finish */
+}
 }
 
-.delay-400 { animation-delay: 0.4s; }
-.delay-800 { animation-delay: 0.8s; }
+.delay-400 { animation-delay: 2.6s; }
+.delay-800 { animation-delay: 3s; }
 
 @keyframes cinematicFade {
   to {
