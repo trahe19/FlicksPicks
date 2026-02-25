@@ -24,7 +24,7 @@ export default function HomePage() {
 
 
       {/* Description */}
-      <p className="text-xl md:text-2xl max-w-2xl mb-6 text-gray-300 font-light animate-fadeUp delay-300">
+      <p className="text-2xl md:text-3xl max-w-2xl mb-6 text-gray-300 font-[var(--font-bebas)] tracking-wider animate-fadeUp delay-300">
         The world's first fantasy film league platform.
       </p>
 
@@ -37,7 +37,7 @@ export default function HomePage() {
       {/* CTA */}
       <a
         href="/join"
-        className="bg-white text-black px-14 py-5 rounded-full font-semibold text-xl tracking-wide hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(255,255,255,0.5)] animate-fadeUp delay-700"
+        className="bg-white text-black px-14 py-5 rounded-full text-xl tracking-wider font-[var(--font-anton)] hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(255,255,255,0.5)] animate-fadeUp delay-700"
       >
         Join the Waitlist
       </a>
