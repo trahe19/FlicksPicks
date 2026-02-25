@@ -4,20 +4,20 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 text-center">
 
-      {/* Optional Logo Image */}
       <Image
         src="/fp-wordmark.png"
         alt="FlicksPicks Logo"
-        width={500}
-        height={150}
-        className="mb-8"
+        width={600}
+        height={200}
+        priority
+        className="mb-10"
       />
 
       <h1 className="text-5xl md:text-6xl font-[var(--font-plaster)] mb-6">
         FlicksPicks
       </h1>
 
-      <p className="text-xl md:text-2xl max-w-2xl mb-6 font-[var(--font-monoton)] text-gray-300">
+      <p className="text-xl md:text-2xl max-w-2xl mb-4 font-[var(--font-monoton)] text-gray-300">
         The World's First Fantasy Film League Platform.
       </p>
 
