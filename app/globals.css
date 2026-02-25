@@ -51,3 +51,36 @@ body::after {
 .animate-logoZoom {
   animation: logoZoom 4s ease-out forwards;
 }
+/* Curtain opening effect */
+.curtain-left,
+.curtain-right {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: black;
+  z-index: 50;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.curtain-left {
+  left: 0;
+  animation-name: openLeft;
+}
+
+.curtain-right {
+  right: 0;
+  animation-name: openRight;
+}
+
+@keyframes openLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes openRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
