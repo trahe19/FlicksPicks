@@ -1,26 +1,27 @@
 import './globals.css'
-import { Plaster, Monoton } from 'next/font/google'
+import { Bebas_Neue, Anton } from 'next/font/google'
 
-const plaster = Plaster({
+const bebas = Bebas_Neue({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-plaster'
+  variable: '--font-bebas',
 })
 
-const monoton = Monoton({
+const anton = Anton({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-monoton'
+  variable: '--font-anton',
 })
 
 export const metadata = {
-  description: "The World's First Fantasy Film League Platform",
+  title: "FlicksPicks",
+  description: "The World's First Fantasy Film League Platform.",
   icons: {
     icon: [
       { url: "/fp-icon.png", sizes: "32x32", type: "image/png" },
     ],
   },
-};
+}
 
 export default function RootLayout({
   children,
@@ -29,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${plaster.variable} ${monoton.variable} bg-black text-white`}>
+      <body className={`${bebas.variable} ${anton.variable} bg-black text-white`}>
         {children}
       </body>
     </html>
