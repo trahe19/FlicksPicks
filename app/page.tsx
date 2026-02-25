@@ -21,10 +21,6 @@ export default function HomePage() {
         priority
        className="mb-14 animate-logoZoom mix-blend-screen drop-shadow-[0_0_60px_rgba(255,255,255,0.8)]"
       />
-
-<p className="text-4xl uppercase tracking-widest font-[var(--font-bebas)] animate-fadeUp delay-300">
-  BLOCKBUSTER SEASON STARTS NOW
-</p>
       {/* Description */}
       <p className="text-2xl md:text-3xl max-w-2xl mb-6 text-gray-300 font-[var(--font-bebas)] tracking-wider animate-fadeUp delay-300">
         The world's first fantasy film league platform.
