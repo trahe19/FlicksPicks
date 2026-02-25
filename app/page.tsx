@@ -26,10 +26,11 @@ export default function HomePage() {
         The world's first fantasy film league platform.
       </p>
 
-      {/* Tagline */}
-      <p className="text-3xl md:text-4xl mb-14 font-[var(--font-monoton)] tracking-widest animate-fadeUp delay-500">
-        Lights. Camera. Draft.
-      </p>
+<p className="text-3xl md:text-4xl mb-14 font-[var(--font-monoton)] tracking-widest">
+  <span className="cinematic-text">Lights.</span>{" "}
+  <span className="cinematic-text delay-400">Camera.</span>{" "}
+  <span className="cinematic-text delay-800">Draft.</span>
+</p>
 
       {/* CTA */}
       <a
