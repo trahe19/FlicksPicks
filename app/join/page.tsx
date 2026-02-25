@@ -1,16 +1,13 @@
 export default function JoinPage() {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 py-10">
-      <h1 className="text-4xl font-bold text-white mb-6 text-center">
-        Join FlicksPicks
-      </h1>
-
-      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="min-h-screen bg-black flex items-center justify-center px-4 py-10">
+      <div className="w-full max-w-4xl bg-white rounded-xl overflow-hidden">
         <iframe
-          src="https://docs.google.com/forms/d/e/https://forms.gle/w3PmWVSuzC5BmSSw5/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeTiiUzHzSGWoaTR-GMbZsa1gYLL175yGDEGDMXCcCs78Elvg/viewform?embedded=true"
           width="100%"
-          height="900"
-          className="border-0"
+          height="1000"
+          style={{ border: "none" }}
+          title="FlicksPicks Waitlist Form"
         />
       </div>
     </div>
