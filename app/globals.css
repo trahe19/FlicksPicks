@@ -142,3 +142,12 @@ body::after {
   30% { opacity: 0.7; }
   100% { opacity: 0; }
 }
+/* Neon headline effect */
+.neon-text {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #00f0ff,
+    0 0 10px #00f0ff,
+    0 0 20px #00f0ff,
+    0 0 40px #0088ff;
+}
