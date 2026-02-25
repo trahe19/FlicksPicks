@@ -3,7 +3,9 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden text-white">
-
+{/* Curtains */}
+<div className="curtain-left" />
+<div className="curtain-right" />
       {/* Cinematic spotlight */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none" />
 
