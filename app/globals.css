@@ -38,3 +38,16 @@ body::after {
   opacity: 0.06;
   pointer-events: none;
 }
+/* Slow cinematic logo zoom */
+@keyframes logoZoom {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-logoZoom {
+  animation: logoZoom 4s ease-out forwards;
+}
