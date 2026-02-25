@@ -1,16 +1,16 @@
 import './globals.css'
-import { Bebas_Neue, Anton } from 'next/font/google'
+import { Orbitron, Oswald } from 'next/font/google'
 
-const bebas = Bebas_Neue({
+const orbitron = Orbitron({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-bebas',
+  weight: ['500', '700'],
+  variable: '--font-orbitron',
 })
 
-const anton = Anton({
+const oswald = Oswald({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-anton',
+  weight: ['500', '700'],
+  variable: '--font-oswald',
 })
 
 export const metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${bebas.variable} ${anton.variable} bg-black text-white`}>
+      <body className={`${orbitron.variable} ${oswald.variable} bg-black text-white`}>
         {children}
       </body>
     </html>
