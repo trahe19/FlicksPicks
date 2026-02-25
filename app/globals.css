@@ -84,3 +84,13 @@ body::after {
   from { transform: translateX(0); }
   to { transform: translateX(100%); }
 }
+/* Moving spotlight sweep */
+.spotlight {
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.08), transparent 60%);
+  animation: sweep 12s ease-in-out infinite alternate;
+}
+
+@keyframes sweep {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
