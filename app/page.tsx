@@ -19,10 +19,6 @@ export default function HomePage() {
         className="mb-14 drop-shadow-[0_0_70px_rgba(255,255,255,0.9)] animate-logoZoom"
       />
 
-      {/* Headline */}
-      <h1 className="text-6xl md:text-7xl tracking-wide font-[var(--font-plaster)] mb-6 animate-fadeUp delay-150">
-        FlicksPicks
-      </h1>
 
       {/* Description */}
       <p className="text-xl md:text-2xl max-w-2xl mb-6 text-gray-300 font-light animate-fadeUp delay-300">
