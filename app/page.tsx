@@ -1,3 +1,7 @@
+import { Orbitron, Oswald } from 'next/font/google'
+
+const orbitron = Orbitron({ subsets: ['latin'], weight: ['500', '700'] })
+const oswald = Oswald({ subsets: ['latin'], weight: ['500', '700'] })
 import Image from "next/image";
 
 export default function HomePage() {
