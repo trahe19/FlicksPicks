@@ -4,13 +4,11 @@ import { Orbitron, Oswald } from 'next/font/google'
 const orbitron = Orbitron({
   subsets: ['latin'],
   weight: ['500', '700'],
-  variable: '--font-orbitron',
 })
 
 const oswald = Oswald({
   subsets: ['latin'],
   weight: ['500', '700'],
-  variable: '--font-oswald',
 })
 
 export const metadata = {
@@ -28,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${orbitron.variable} ${oswald.variable} bg-black text-white`}>
+      <body className="bg-black text-white">
         {children}
       </body>
     </html>
