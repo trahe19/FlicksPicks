@@ -17,9 +17,11 @@ export const metadata = {
   title: "FlicksPicks",
   description: "The World's First Fantasy Film League Platform.",
   icons: {
-    icon: '/fp-logo.png', // replace after upload
+    icon: [
+      { url: "/fp-icon.png", sizes: "32x32", type: "image/png" },
+    ],
   },
-}
+};
 
 export default function RootLayout({
   children,
