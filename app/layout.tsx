@@ -1,14 +1,24 @@
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import { Plaster, Monoton } from 'next/font/google'
 
-const poppins = Poppins({ 
+const plaster = Plaster({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
+  weight: '400',
+  variable: '--font-plaster'
+})
+
+const monoton = Monoton({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-monoton'
 })
 
 export const metadata = {
   title: "FlicksPicks",
-  description: "The fantasy sports league for movies. Draft films. Compete with friends. Win based on real box office performance.",
+  description: "The World's First Fantasy Film League Platform.",
+  icons: {
+    icon: '/fp-logo.png', // replace after upload
+  },
 }
 
 export default function RootLayout({
@@ -18,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-black text-white`}>
+      <body className={`${plaster.variable} ${monoton.variable} bg-black text-white`}>
         {children}
       </body>
     </html>
