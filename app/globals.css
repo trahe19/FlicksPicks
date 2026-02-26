@@ -152,18 +152,9 @@ body {
 .background-smoke {
   position: fixed;
   inset: 0;
-  pointer-events: none;
-  z-index: 4;
-
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  background-size: 300px 300px;
-
-  opacity: 0.12;
-  mix-blend-mode: screen;
-
-  animation: smokeDrift 40s linear infinite;
+  background: rgba(255, 0, 0, 0.4);
+  z-index: 9999;
 }
-
 @keyframes smokeDrift {
   from {
     background-position: 0px 0px;
