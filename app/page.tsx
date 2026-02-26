@@ -42,7 +42,7 @@ export default function HomePage() {
     width={650}
     height={250}
     priority
-    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_120px_rgba(255,255,255,1)]"
+    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_120px_rgba(255,215,0,0.9)]"
   />
 
 </div>
