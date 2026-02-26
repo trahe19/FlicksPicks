@@ -13,54 +13,52 @@ const oswald = Oswald({
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-black via-neutral-950 to-black relative overflow-hidden text-white">
+    <>
+      {/* ===== FULL PAGE BACKGROUND LAYERS ===== */}
+      <div className="background-smoke" />
+      <div className="background-light light-left" />
+      <div className="background-light light-right" />
 
-      <div className="curtain-left" />
-      <div className="curtain-right" />
-      <div className="film-flash" />
-      {/* Full-page moving background lights */}
-<div className="page-light light-left" />
-<div className="page-light light-right" />
-<div className="page-smoke" />
+      {/* ===== MAIN CONTENT ===== */}
+      <main className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-black via-neutral-950 to-black text-white">
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none" />
-      <div className="absolute inset-0 pointer-events-none spotlight-sweep" />
+        <div className="curtain-left" />
+        <div className="curtain-right" />
+        <div className="film-flash" />
 
-  
-{/* Theater Spotlight Scene */}
-<div className="relative mb-24 flex justify-center items-center overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 pointer-events-none spotlight-sweep" />
 
+        {/* LOGO SECTION */}
+        <div className="relative mb-24 flex justify-center items-center">
+          <Image
+            src="/fp-wordmark.png"
+            alt="FlicksPicks Logo"
+            width={650}
+            height={250}
+            priority
+            className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,1)]"
+          />
+        </div>
 
-  {/* Atmospheric smoke */}
-  <div className="stage-smoke" />
+        <p className={`text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
+          The world's first fantasy film league platform
+        </p>
 
-  <Image
-    src="/fp-wordmark.png"
-    alt="FlicksPicks Logo"
-    width={650}
-    height={250}
-    priority
-    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,1)] relative z-10"
-  />
+        <p className={`text-4xl md:text-6xl mb-14 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+          <span className="cinematic-text">Lights.</span>{" "}
+          <span className="cinematic-text delay-400">Camera.</span>{" "}
+          <span className="cinematic-text delay-800">Draft.</span>
+        </p>
 
-</div>
-      <p className={`text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
-        The world's first fantasy film league platform
-      </p>
+        <a
+          href="/join"
+          className={`bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] animate-fadeUp delay-700 ${oswald.className}`}
+        >
+          Join the Waitlist
+        </a>
 
-      <p className={`text-4xl md:text-6xl mb-14 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
-        <span className="cinematic-text">Lights.</span>{" "}
-        <span className="cinematic-text delay-400">Camera.</span>{" "}
-        <span className="cinematic-text delay-800">Draft.</span>
-      </p>
-
-      <a
-        href="/join"
-        className={`bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] animate-fadeUp delay-700 ${oswald.className}`}
-      >
-        Join the Waitlist
-      </a>
-
-    </main>
+      </main>
+    </>
   );
 }
