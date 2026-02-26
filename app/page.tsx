@@ -22,14 +22,21 @@ export default function HomePage() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none" />
       <div className="absolute inset-0 pointer-events-none spotlight-sweep" />
 
-      <Image
-        src="/fp-wordmark.png"
-        alt="FlicksPicks Logo"
-        width={650}
-        height={250}
-        priority
-        className="mb-14 animate-logoZoom mix-blend-screen drop-shadow-[0_0_60px_rgba(255,255,255,0.8)]"
-      />
+ <div className="relative mb-14 flex justify-center">
+  
+  {/* Soft halo behind logo */}
+  <div className="absolute w-[700px] h-[300px] bg-white/10 blur-3xl rounded-full -z-10"></div>
+
+  <Image
+    src="/fp-wordmark.png"
+    alt="FlicksPicks Logo"
+    width={650}
+    height={250}
+    priority
+    className="animate-logoZoom mix-blend-screen brightness-125 contrast-125 drop-shadow-[0_0_90px_rgba(255,255,255,0.95)]"
+  />
+
+</div>
 
       <p className={`text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
         The world's first fantasy film league platform
