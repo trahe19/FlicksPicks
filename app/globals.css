@@ -176,40 +176,43 @@ body::after {
 
 .background-light {
   position: fixed;
-  top: -20%;
-  width: 800px;
-  height: 200%;
+  top: -30%;
+  width: 500px;
+  height: 220%;
   pointer-events: none;
   z-index: 0;
+  opacity: 1;
+
   background: linear-gradient(
     to bottom,
-    rgba(0,255,255,0.35),
-    rgba(0,255,255,0.2),
-    transparent 70%
+    rgba(0,255,255,0.8) 0%,
+    rgba(0,255,255,0.5) 25%,
+    rgba(0,255,255,0.25) 50%,
+    rgba(0,255,255,0.05) 75%,
+    transparent 100%
   );
-  filter: blur(140px);
-  opacity: 0.8;
+
+  filter: blur(70px);
 }
 
 .light-left {
-  left: 10%;
+  left: 8%;
   transform-origin: top center;
-  animation: sweepLeft 12s ease-in-out infinite alternate;
+  animation: sweepLeft 8s ease-in-out infinite alternate;
 }
 
 .light-right {
-  right: 10%;
+  right: 8%;
   transform-origin: top center;
-  animation: sweepRight 12s ease-in-out infinite alternate;
+  animation: sweepRight 8s ease-in-out infinite alternate;
 }
 
 @keyframes sweepLeft {
-  from { transform: rotate(-35deg); }
-  to { transform: rotate(25deg); }
+  from { transform: rotate(-40deg); }
+  to   { transform: rotate(30deg); }
 }
 
 @keyframes sweepRight {
-  from { transform: rotate(35deg); }
-  to { transform: rotate(-25deg); }
+  from { transform: rotate(40deg); }
+  to   { transform: rotate(-30deg); }
 }
-
