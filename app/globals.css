@@ -149,16 +149,23 @@ body {
 
 /* ===== FULL PAGE SMOKE ===== */
 
+/* ===== FULL PAGE SMOKE (VISIBLE VERSION) ===== */
+
 .background-smoke {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 4;
+
   background:
-    radial-gradient(circle at 20% 40%, rgba(0,255,255,0.15), transparent 50%),
-    radial-gradient(circle at 80% 60%, rgba(0,255,255,0.12), transparent 55%);
-  filter: blur(120px);
-  animation: smokeMove 25s ease-in-out infinite alternate;
+    radial-gradient(circle at 30% 40%, rgba(0,255,255,0.2), transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(0,255,255,0.18), transparent 55%),
+    radial-gradient(circle at 50% 80%, rgba(0,255,255,0.15), transparent 60%);
+
+  filter: blur(50px);     /* much less blur */
+  opacity: 0.8;
+
+  animation: smokeMove 30s ease-in-out infinite alternate;
 }
 
 @keyframes smokeMove {
@@ -168,25 +175,26 @@ body {
 
 /* ===== MOVING LIGHT SWEEPS ===== */
 
+/* ===== MOVING LIGHT SWEEPS (REFINED) ===== */
+
 .background-light {
   position: fixed;
   top: -30%;
-  width: 500px;
+  width: 250px;                 /* thinner */
   height: 220%;
   pointer-events: none;
   z-index: 5;
-  opacity: 1;
+  opacity: 0.9;
 
   background: linear-gradient(
     to bottom,
-    rgba(0,255,255,0.8) 0%,
-    rgba(0,255,255,0.5) 25%,
-    rgba(0,255,255,0.25) 50%,
-    rgba(0,255,255,0.05) 75%,
+    rgba(0,255,255,0.9) 0%,
+    rgba(0,255,255,0.6) 30%,
+    rgba(0,255,255,0.2) 60%,
     transparent 100%
   );
 
-  filter: blur(70px);
+  filter: blur(40px);           /* tighter glow */
 }
 
 .light-left {
