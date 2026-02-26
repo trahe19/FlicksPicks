@@ -45,7 +45,6 @@ export default function HomePage() {
     className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,0.9)]"
   />
 
-</div>
 
       <p className={`text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
         The world's first fantasy film league platform
