@@ -20,7 +20,7 @@ export default function HomePage() {
       <div className="background-light light-right" />
 
       {/* ===== MAIN CONTENT ===== */}
-      <main className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gradient-to-b from-black via-neutral-950 to-black text-white">
+      <main className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center bg-black text-white">
 
         <div className="curtain-left" />
         <div className="curtain-right" />
