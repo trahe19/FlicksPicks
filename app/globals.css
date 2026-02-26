@@ -29,15 +29,7 @@ html, body {
 .delay-500 { animation-delay: 0.5s; }
 .delay-700 { animation-delay: 0.7s; }
 
-/* Subtle film grain overlay */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.06;
-  pointer-events: none;
-}
+
 /* Slow cinematic logo zoom */
 @keyframes logoZoom {
   from {
