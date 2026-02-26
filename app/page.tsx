@@ -33,7 +33,7 @@ export default function HomePage() {
     width={650}
     height={250}
     priority
-    className="animate-logoZoom mix-blend-screen brightness-150 contrast-125 drop-shadow-[0_0_120px_rgba(255,255,255,1)]"
+  className="animate-logoZoom brightness-150 contrast-125 drop-shadow-[0_0_90px_rgba(0,200,255,0.9)]"
   />
 
 </div>
