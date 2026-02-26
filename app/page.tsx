@@ -27,15 +27,25 @@ export default function HomePage() {
   {/* Soft halo behind logo */}
   <div className="absolute w-[700px] h-[300px] bg-white/10 blur-3xl rounded-full -z-10"></div>
 
+{/* Illuminated Wordmark */}
+<div className="relative mb-16 flex justify-center">
+
+  {/* Wide cinematic bloom */}
+  <div className="absolute w-[800px] h-[350px] bg-gradient-to-r from-white/10 via-white/30 to-white/10 blur-3xl rounded-full -z-10"></div>
+
+  {/* Secondary soft glow */}
+  <div className="absolute w-[600px] h-[250px] bg-white/20 blur-2xl rounded-full -z-10"></div>
+
   <Image
     src="/fp-wordmark.png"
     alt="FlicksPicks Logo"
     width={650}
     height={250}
     priority
-  className="animate-logoZoom brightness-150 contrast-125 drop-shadow-[0_0_90px_rgba(0,200,255,0.9)]"
+    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_120px_rgba(255,255,255,1)]"
   />
 
+</div>
 </div>
 
       <p className={`text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
