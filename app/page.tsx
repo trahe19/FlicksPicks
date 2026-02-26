@@ -24,17 +24,17 @@ export default function HomePage() {
 
  <div className="relative mb-14 flex justify-center">
   
-  {/* Soft halo behind logo */}
-  <div className="absolute w-[700px] h-[300px] bg-white/10 blur-3xl rounded-full -z-10"></div>
+{/* Cyan Illuminated Wordmark */}
+<div className="relative mb-16 flex justify-center items-center">
 
-{/* Illuminated Wordmark */}
-<div className="relative mb-16 flex justify-center">
+  {/* Cyan spotlight bloom */}
+  <div className="absolute w-[900px] h-[400px] bg-cyan-400/20 blur-[120px] rounded-full -z-10"></div>
 
-  {/* Wide cinematic bloom */}
-  <div className="absolute w-[800px] h-[350px] bg-gradient-to-r from-white/10 via-white/30 to-white/10 blur-3xl rounded-full -z-10"></div>
+  {/* Inner bright core */}
+  <div className="absolute w-[600px] h-[250px] bg-cyan-300/30 blur-[80px] rounded-full -z-10"></div>
 
-  {/* Secondary soft glow */}
-  <div className="absolute w-[600px] h-[250px] bg-white/20 blur-2xl rounded-full -z-10"></div>
+  {/* Animated smoke layer */}
+  <div className="absolute inset-0 smoke-layer -z-10"></div>
 
   <Image
     src="/fp-wordmark.png"
@@ -42,8 +42,10 @@ export default function HomePage() {
     width={650}
     height={250}
     priority
-    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_120px_rgba(255,215,0,0.9)]"
+    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,0.9)]"
   />
+
+</div>
 
 </div>
 </div>
