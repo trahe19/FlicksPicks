@@ -147,32 +147,7 @@ body {
 }
 
 
-/* ===== REAL STAGE FOG MACHINE EFFECT ===== */
 
-.background-smoke {
-  position: fixed;
-  inset: 0;
-  z-index: 4;
-  pointer-events: none;
-
-  background: url("https://i.imgur.com/8P3QZ6E.png");
-  background-size: cover;
-  background-repeat: repeat;
-
-  opacity: 0.35;
-  mix-blend-mode: screen;
-
-  animation: fogDrift 60s linear infinite;
-}
-
-@keyframes fogDrift {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 800px 400px;
-  }
-}
 /* ===== MOVING LIGHT SWEEPS ===== */
 
 /* ===== MOVING LIGHT SWEEPS (REFINED) ===== */
