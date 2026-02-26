@@ -28,13 +28,13 @@ export default function HomePage() {
 <div className="relative mb-16 flex justify-center items-center">
 
   {/* Cyan spotlight bloom */}
-  <div className="absolute w-[900px] h-[400px] bg-cyan-400/20 blur-[120px] rounded-full -z-10"></div>
+  <div className="absolute w-[900px] h-[400px] bg-cyan-400/20 blur-[120px] rounded-full -z-10" />
 
   {/* Inner bright core */}
-  <div className="absolute w-[600px] h-[250px] bg-cyan-300/30 blur-[80px] rounded-full -z-10"></div>
+  <div className="absolute w-[600px] h-[250px] bg-cyan-300/30 blur-[80px] rounded-full -z-10" />
 
   {/* Animated smoke layer */}
-  <div className="absolute inset-0 smoke-layer -z-10"></div>
+  <div className="absolute inset-0 smoke-layer -z-10" />
 
   <Image
     src="/fp-wordmark.png"
@@ -45,9 +45,6 @@ export default function HomePage() {
     className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,0.9)]"
   />
 
-</div>
-
-</div>
 </div>
 
       <p className={`text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
