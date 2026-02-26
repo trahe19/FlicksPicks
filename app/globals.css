@@ -151,3 +151,21 @@ body::after {
     0 0 20px #00f0ff,
     0 0 40px #0088ff;
 }
+
+/* Subtle animated smoke effect */
+.smoke-layer {
+  background: radial-gradient(circle at 50% 50%, rgba(0,255,255,0.15), transparent 60%);
+  filter: blur(60px);
+  animation: smokeMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes smokeMove {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.1) translateY(-20px);
+    opacity: 0.7;
+  }
+}
