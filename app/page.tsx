@@ -23,17 +23,15 @@ export default function HomePage() {
       <div className="absolute inset-0 pointer-events-none spotlight-sweep" />
 
   
-{/* Cyan Illuminated Wordmark */}
-<div className="relative mb-20 flex justify-center items-center">
+{/* Theater Spotlight Scene */}
+<div className="relative mb-24 flex justify-center items-center overflow-hidden">
 
-  {/* Strong outer glow */}
-  <div className="absolute w-[1000px] h-[500px] bg-cyan-400/30 blur-[140px] rounded-full -z-10" />
+  {/* Moving spotlight beams */}
+  <div className="spotlight-beam beam-left" />
+  <div className="spotlight-beam beam-right" />
 
-  {/* Intense center beam */}
-  <div className="absolute w-[700px] h-[300px] bg-cyan-300/40 blur-[90px] rounded-full -z-10" />
-
-  {/* Visible drifting haze */}
-  <div className="absolute w-[900px] h-[400px] smoke-layer -z-10" />
+  {/* Atmospheric smoke */}
+  <div className="stage-smoke" />
 
   <Image
     src="/fp-wordmark.png"
@@ -41,7 +39,7 @@ export default function HomePage() {
     width={650}
     height={250}
     priority
-    className="animate-logoZoom invert brightness-160 contrast-130 drop-shadow-[0_0_180px_rgba(0,255,255,1)]"
+    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,1)] relative z-10"
   />
 
 </div>
