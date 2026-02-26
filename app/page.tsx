@@ -32,7 +32,7 @@ export default function HomePage() {
       />
 
       <p className={`text-2xl md:text-3xl max-w-3xl mb-6 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
-        The world's first fantasy film league platform.
+        The world's first fantasy film league platform
       </p>
 
       <p className={`text-4xl md:text-6xl mb-14 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
