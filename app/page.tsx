@@ -18,6 +18,10 @@ export default function HomePage() {
       <div className="curtain-left" />
       <div className="curtain-right" />
       <div className="film-flash" />
+      {/* Full-page moving background lights */}
+<div className="page-light light-left" />
+<div className="page-light light-right" />
+<div className="page-smoke" />
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none" />
       <div className="absolute inset-0 pointer-events-none spotlight-sweep" />
@@ -26,9 +30,6 @@ export default function HomePage() {
 {/* Theater Spotlight Scene */}
 <div className="relative mb-24 flex justify-center items-center overflow-hidden">
 
-  {/* Moving spotlight beams */}
-  <div className="spotlight-beam beam-left" />
-  <div className="spotlight-beam beam-right" />
 
   {/* Atmospheric smoke */}
   <div className="stage-smoke" />
