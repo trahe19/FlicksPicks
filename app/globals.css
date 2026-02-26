@@ -147,21 +147,33 @@ body {
 }
 
 
-/* ===== REALISTIC ATMOSPHERIC SMOKE ===== */
+/* ===== VISIBLE STAGE SMOKE ===== */
 
 .background-smoke {
   position: fixed;
   inset: 0;
-  background: rgba(255, 0, 0, 0.4);
-  z-index: 9999;
+  z-index: 4;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 40% 50%, rgba(0,255,255,0.25), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(0,255,255,0.18), transparent 55%),
+    url("https://grainy-gradients.vercel.app/noise.svg");
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    250px 250px;
+
+  mix-blend-mode: screen;
+  opacity: 0.35;
+
+  animation: smokeDrift 60s linear infinite;
 }
+
 @keyframes smokeDrift {
-  from {
-    background-position: 0px 0px;
-  }
-  to {
-    background-position: 400px 300px;
-  }
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to   { background-position: 0px 0px, 0px 0px, 400px 300px; }
 }
 
 /* ===== MOVING LIGHT SWEEPS ===== */
