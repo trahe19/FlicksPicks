@@ -152,89 +152,63 @@ body::after {
     0 0 40px #0088ff;
 }
 
-/* Stronger animated smoke */
-.smoke-layer {
-  background: radial-gradient(
-    circle at 50% 60%,
-    rgba(0,255,255,0.25),
-    rgba(0,255,255,0.15),
-    transparent 70%
-  );
-  filter: blur(80px);
-  animation: smokeMove 10s ease-in-out infinite alternate;
-}
 
-@keyframes smokeMove {
-  0% {
-    transform: scale(1) translateY(0px);
-    opacity: 0.6;
-  }
-  100% {
-    transform: scale(1.2) translateY(-30px);
-    opacity: 0.9;
-  }
-}
-/* === THEATER SPOTLIGHT BEAMS === */
+/* ===== FULL PAGE SPOTLIGHTS ===== */
 
-.spotlight-beam {
-  position: absolute;
-  top: -50%;
-  width: 300px;
+.page-light {
+  position: fixed;
+  top: -30%;
+  width: 600px;
   height: 200%;
   background: linear-gradient(
     to bottom,
-    rgba(0,255,255,0.6),
-    rgba(0,255,255,0.3),
-    transparent 70%
-  );
-  filter: blur(60px);
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.beam-left {
-  left: 20%;
-  transform-origin: top center;
-  animation: sweepLeft 6s ease-in-out infinite alternate;
-}
-
-.beam-right {
-  right: 20%;
-  transform-origin: top center;
-  animation: sweepRight 6s ease-in-out infinite alternate;
-}
-
-@keyframes sweepLeft {
-  from { transform: rotate(-25deg); }
-  to   { transform: rotate(15deg); }
-}
-
-@keyframes sweepRight {
-  from { transform: rotate(25deg); }
-  to   { transform: rotate(-15deg); }
-}
-
-/* === STAGE SMOKE === */
-
-.stage-smoke {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
+    rgba(0,255,255,0.25),
     rgba(0,255,255,0.15),
     transparent 70%
   );
   filter: blur(120px);
   opacity: 0.6;
-  animation: smokeDrift 12s ease-in-out infinite alternate;
   pointer-events: none;
+  z-index: 0;
+}
+
+.light-left {
+  left: 15%;
+  transform-origin: top center;
+  animation: sweepLeft 10s ease-in-out infinite alternate;
+}
+
+.light-right {
+  right: 15%;
+  transform-origin: top center;
+  animation: sweepRight 10s ease-in-out infinite alternate;
+}
+
+@keyframes sweepLeft {
+  from { transform: rotate(-30deg); }
+  to   { transform: rotate(20deg); }
+}
+
+@keyframes sweepRight {
+  from { transform: rotate(30deg); }
+  to   { transform: rotate(-20deg); }
+}
+
+/* ===== FULL PAGE SMOKE ===== */
+
+.page-smoke {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(0,255,255,0.08), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(0,255,255,0.06), transparent 65%);
+  filter: blur(100px);
+  animation: smokeDrift 20s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes smokeDrift {
-  from {
-    transform: scale(1) translateY(0px);
-  }
-  to {
-    transform: scale(1.1) translateY(-30px);
-  }
+  from { transform: scale(1) translateY(0px); }
+  to   { transform: scale(1.1) translateY(-40px); }
 }
