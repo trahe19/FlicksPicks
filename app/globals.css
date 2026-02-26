@@ -147,7 +147,7 @@ body {
 }
 
 
-/* ===== VISIBLE STAGE SMOKE ===== */
+/* ===== REAL STAGE FOG MACHINE EFFECT ===== */
 
 .background-smoke {
   position: fixed;
@@ -155,27 +155,24 @@ body {
   z-index: 4;
   pointer-events: none;
 
-  background:
-    radial-gradient(circle at 40% 50%, rgba(0,255,255,0.25), transparent 60%),
-    radial-gradient(circle at 70% 30%, rgba(0,255,255,0.18), transparent 55%),
-    url("https://grainy-gradients.vercel.app/noise.svg");
+  background: url("https://i.imgur.com/8P3QZ6E.png");
+  background-size: cover;
+  background-repeat: repeat;
 
-  background-size:
-    100% 100%,
-    100% 100%,
-    250px 250px;
-
-  mix-blend-mode: screen;
   opacity: 0.35;
+  mix-blend-mode: screen;
 
-  animation: smokeDrift 60s linear infinite;
+  animation: fogDrift 60s linear infinite;
 }
 
-@keyframes smokeDrift {
-  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
-  to   { background-position: 0px 0px, 0px 0px, 400px 300px; }
+@keyframes fogDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 800px 400px;
+  }
 }
-
 /* ===== MOVING LIGHT SWEEPS ===== */
 
 /* ===== MOVING LIGHT SWEEPS (REFINED) ===== */
