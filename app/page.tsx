@@ -32,7 +32,7 @@ export default function HomePage() {
         {/* LOGO SECTION */}
         <div className="relative mb-24 flex justify-center items-center">
           <Image
-            src="/fp-wordmark.png"
+            src="/fp-wordmark2.png"
             alt="FlicksPicks Logo"
             width={650}
             height={250}
