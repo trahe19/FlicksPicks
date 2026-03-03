@@ -57,7 +57,21 @@ export default function HomePage() {
         >
           Join the Waitlist
         </a>
-
+{/* Trailer Section */}
+       <h2 className={`text-3xl md:text-4xl mb-6 uppercase tracking-widest ${orbitron.className}`}>
+  Watch The Trailer
+</h2>
+<div className="w-full max-w-5xl mt-20 px-4">
+  <div className="relative w-full pb-[56.25%] rounded-2xl overflow-hidden shadow-2xl">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/76SN9gb9ekE?rel=0&modestbranding=1"
+      title="FlicksPicks Trailer"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
       </main>
     </>
   );
