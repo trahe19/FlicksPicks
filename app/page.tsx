@@ -20,7 +20,7 @@ export default function HomePage() {
       <div className="background-light light-right" />
 
       {/* ===== MAIN CONTENT ===== */}
-     <main className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center text-white">
+     <main className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 px-y-24 text-center text-white">
 
         <div className="curtain-left" />
         <div className="curtain-right" />
@@ -61,7 +61,7 @@ export default function HomePage() {
        <h2 className={`text-3xl md:text-4xl mb-6 uppercase tracking-widest ${orbitron.className}`}>
   Watch The Trailer
 </h2>
-<div className="w-full max-w-5xl mt-20 px-4">
+<div className="w-full max-w-3xl mt-32 px-6">
   <div className="relative w-full pb-[56.25%] rounded-2xl overflow-hidden shadow-2xl">
     <iframe
       className="absolute top-0 left-0 w-full h-full"
