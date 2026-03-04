@@ -78,20 +78,21 @@ export default function HomePage() {
 {/* ===== GAMEPLAY SECTION ===== */}
 <section className="relative w-full max-w-6xl mb-32 px-6">
 
-  <h2 className={`text-4xl md:text-5xl mb-20 tracking-[0.35em] uppercase neon-text ${orbitron.className}`}>
+ <h2 className={`text-5xl md:text-6xl mb-24 tracking-[0.35em] uppercase neon-text ${orbitron.className}`}>
     How it Works
   </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
     {/* ACT 1 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(0,255,255,0.25)]">
+    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-      <div className="text-cyan-400 text-sm tracking-[0.4em] mb-3">ACT I</div>
 
-      <h3 className="text-3xl mb-4">Draft Your Film Team</h3>
+     <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT I</div>
 
-      <p className="text-gray-300 leading-relaxed">
+       <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">Draft</h3>
+
+      <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
         Build a roster of upcoming movies, actors, and directors releasing this year.
         Balance box-office blockbusters with Oscar contenders.
       </p>
@@ -99,43 +100,46 @@ export default function HomePage() {
     </div>
 
     {/* ACT 2 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(0,255,255,0.25)]">
+    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-      <div className="text-cyan-400 text-sm tracking-[0.4em] mb-3">ACT II</div>
 
-      <h3 className="text-3xl mb-4">Movies Hit Theaters</h3>
+     <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT II</div>
 
-      <p className="text-gray-300 leading-relaxed">
-        Films score points from box-office profit, critic ratings, and audience reception.
-        Actors and directors earn points from the movies they’re part of.
+       <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">Movies Hit Theaters</h3>
+
+       <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+        Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
+        Actors and directors earn FlicksPoints from the movies they’re part of.
       </p>
 
     </div>
 
     {/* ACT 3 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(0,255,255,0.25)]">
+    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-      <div className="text-cyan-400 text-sm tracking-[0.4em] mb-3">ACT III</div>
 
-      <h3 className="text-3xl mb-4">Win Monthly Matchups</h3>
+      <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT III</div>
 
-      <p className="text-gray-300 leading-relaxed">
-        Every month your starting movie faces another team head-to-head.
-        Manage your roster, make waiver pickups, and stack up wins.
+       <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">Win Monthly Matchups</h3>
+
+       <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+        Every month your starters face another team head-to-head.
+        Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
       </p>
 
     </div>
 
     {/* ACT 4 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_50px_rgba(0,255,255,0.25)]">
+    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-      <div className="text-cyan-400 text-sm tracking-[0.4em] mb-3">ACT IV</div>
 
-      <h3 className="text-3xl mb-4">Oscar Night Decides It</h3>
+      <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT IV</div>
 
-      <p className="text-gray-300 leading-relaxed">
+      <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">The Academy Cup</h3>
+
+      <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
         The season culminates on Oscar night. If your movies, actors, or directors win
-        Academy Awards, you score championship points.
+        Academy Awards, you score championship FlicksPoints.
       </p>
 
     </div>
