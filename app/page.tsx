@@ -92,7 +92,7 @@ export default function HomePage() {
 {/* ACT I */}
 <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-  <div className="text-cyan-400 text-3xl tracking-[0.5em] mb-6 font-bold">
+  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
     ACT I
   </div>
 
@@ -113,7 +113,7 @@ export default function HomePage() {
 {/* ACT II */}
 <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-  <div className="text-cyan-400 text-2xl tracking-[0.5em] mb-6 font-bold">
+  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
     ACT II
   </div>
 
@@ -134,7 +134,7 @@ export default function HomePage() {
 {/* ACT III */}
 <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-  <div className="text-cyan-400 text-2xl tracking-[0.5em] mb-6 font-bold">
+  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
     ACT III
   </div>
 
@@ -155,7 +155,7 @@ export default function HomePage() {
 {/* ACT IV */}
 <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-  <div className="text-cyan-400 text-2xl tracking-[0.5em] mb-6 font-bold">
+  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
     ACT IV
   </div>
 
