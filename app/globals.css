@@ -208,9 +208,19 @@ body {
     radial-gradient(circle at 50% 80%, rgba(255,255,255,0.04), transparent 70%);
 
   animation: fogShift 25s ease-in-out infinite alternate;
-  mix-blend-mode: screen;
 }
 
+.background-smoke::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 40% 30%, rgba(255,255,255,0.05), transparent 60%),
+    radial-gradient(circle at 60% 70%, rgba(255,255,255,0.05), transparent 65%);
+
+  animation: fogShiftReverse 35s ease-in-out infinite alternate;
+}
 @keyframes fogShift {
   0% {
     transform: translateY(0px) scale(1);
