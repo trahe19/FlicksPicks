@@ -255,20 +255,20 @@ body {
 .film-wrapper{
   overflow:hidden;
   width:100%;
-  padding:50px 0 60px 0;
+  padding:40px 0 50px 0;
 }
 
 
-/* MAIN FILM STRIP */
+/* FILM STRIP TRACK */
 
 .film-track{
 
   display:flex;
   align-items:stretch;
 
-  gap:24px;
+  gap:28px;
 
-  padding:80px 180px;
+  padding:35px 180px;
 
   background:#000;
 
@@ -276,9 +276,10 @@ body {
 
   width:max-content;
 
-  height:360px;
+  height:420px;
 
   animation:filmScroll 40s linear infinite;
+
 }
 
 
@@ -294,7 +295,7 @@ body {
   left:160px;
   right:160px;
 
-  height:18px;
+  height:14px;
 
   background:
   repeating-linear-gradient(
@@ -320,11 +321,11 @@ body {
 
 .film-frame{
 
-  width:640px;
+  width:680px;
 
-  height:220px;
+  height:300px;
 
-  padding:32px 48px;
+  padding:40px 60px;
 
   background:white;
 
@@ -351,13 +352,13 @@ body {
 
 .act{
 
-  font-size:18px;
+  font-size:20px;
 
   letter-spacing:8px;
 
-  margin-bottom:12px;
+  margin-bottom:14px;
 
-  font-weight:600;
+  font-weight:700;
 
 }
 
@@ -366,9 +367,9 @@ body {
 
 .film-frame h3{
 
-  font-size:30px;
+  font-size:34px;
 
-  margin-bottom:12px;
+  margin-bottom:16px;
 
   line-height:1.2;
 
@@ -379,11 +380,11 @@ body {
 
 .film-frame p{
 
-  font-size:18px;
+  font-size:20px;
 
-  line-height:1.45;
+  line-height:1.5;
 
-  max-width:520px;
+  max-width:560px;
 
 }
 
