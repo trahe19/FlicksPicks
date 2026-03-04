@@ -284,7 +284,7 @@ body {
 }
 
 
-/* SPROCKET HOLES (ROUNDED FILM PERFORATIONS) */
+/* SPROCKET HOLES (ROUNDED RECTANGLE CUTOUTS) */
 
 .film-track::before,
 .film-track::after{
@@ -296,15 +296,29 @@ body {
   left:160px;
   right:160px;
 
-  height:18px;
+  height:20px;
 
   background:
-  radial-gradient(circle at center,
-  transparent 6px,
-  white 7px);
+  repeating-linear-gradient(
+    to right,
+    black 0px,
+    black 18px,
+    transparent 18px,
+    transparent 36px,
+    black 36px,
+    black 54px
+  );
 
-  background-size:38px 18px;
-  background-repeat:repeat-x;
+  mask:
+  repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 18px,
+    black 18px,
+    black 36px
+  );
+
+  border-radius:8px;
 
 }
 
@@ -330,13 +344,13 @@ body {
   background:linear-gradient(
     to bottom,
     #f4f1e6,
-    #ebe4d2
+    #e9e1cd
   );
 
   color:#111;
 
-  border-left:14px solid #000;
-  border-right:14px solid #000;
+  border-left:14px solid black;
+  border-right:14px solid black;
 
   display:flex;
   flex-direction:column;
