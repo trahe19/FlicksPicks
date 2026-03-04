@@ -243,21 +243,17 @@ body {
 /* ============================= */
 
 .film-wrapper{
-  overflow:hidden;
   width:100%;
-  padding:40px 0 60px 0;
+  overflow:hidden;
+  padding:30px 0;
 }
 
-/* MAIN FILM STRIP */
-
 .film-track{
-
   display:flex;
   align-items:center;
+  gap:20px;
 
-  gap:22px;
-
-  padding:60px 160px;
+  padding:40px 120px;
 
   background:#000;
 
@@ -265,12 +261,12 @@ body {
 
   width:max-content;
 
-  height:300px;
+  height:260px;
 
-animation:filmScroll 38s linear infinite, filmJitter .4s infinite;
+  animation:filmScroll 35s linear infinite;
 }
 
-/* SPROCKET HOLES */
+/* sprocket holes */
 
 .film-track::before,
 .film-track::after{
@@ -282,43 +278,41 @@ animation:filmScroll 38s linear infinite, filmJitter .4s infinite;
   left:0;
   right:0;
 
-  height:22px;
+  height:18px;
 
-  background:
-  repeating-linear-gradient(
+  background:repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 24px,
-    white 24px,
-    white 42px
+    transparent 22px,
+    white 22px,
+    white 38px
   );
-  
 }
 
 .film-track::before{
-  top:0;
+  top:6px;
 }
 
 .film-track::after{
-  bottom:0;
+  bottom:6px;
 }
 
-/* FILM FRAMES */
+/* frames */
 
 .film-frame{
 
   width:520px;
 
-  height:200px;
+  height:170px;
 
-  padding:40px 60px;
+  padding:30px 50px;
 
   background:white;
 
   color:black;
 
-  border-left:14px solid black;
-  border-right:14px solid black;
+  border-left:12px solid black;
+  border-right:12px solid black;
 
   display:flex;
   flex-direction:column;
@@ -327,77 +321,39 @@ animation:filmScroll 38s linear infinite, filmJitter .4s infinite;
 
   text-align:center;
 
-  transition:all .25s ease;
-
+  transition:.25s;
 }
-
-/* FRAME HOVER */
 
 .film-frame:hover{
-
-  transform:translateY(-6px);
-
-  box-shadow:0 0 60px rgba(0,255,255,0.35);
-
+  transform:translateY(-4px);
+  box-shadow:0 0 40px rgba(0,255,255,.35);
 }
-
-/* ACT LABEL */
 
 .act{
-
   font-size:18px;
-
-  letter-spacing:8px;
-
-  margin-bottom:10px;
-
+  letter-spacing:6px;
+  margin-bottom:8px;
   font-weight:600;
-
 }
-
-/* TITLE */
 
 .film-frame h3{
-
-  font-size:34px;
-
-  margin-bottom:12px;
-
+  font-size:30px;
+  margin-bottom:8px;
 }
-
-/* DESCRIPTION */
 
 .film-frame p{
-
-  font-size:18px;
-
-  line-height:1.5;
-
-  max-width:380px;
-
+  font-size:17px;
+  line-height:1.4;
+  max-width:360px;
 }
 
-/* FILM SCROLL */
+/* scroll */
 
 @keyframes filmScroll{
-
   0%{
     transform:translateX(0);
   }
-
   100%{
     transform:translateX(-50%);
   }
-
-}
-/* PROJECTOR JITTER */
-
-@keyframes filmJitter{
-
-  0% { transform: translateX(0) translateY(0px); }
-
-  50% { transform: translateX(0) translateY(1px); }
-
-  100% { transform: translateX(0) translateY(0px); }
-
 }
