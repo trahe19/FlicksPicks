@@ -261,12 +261,13 @@ body {
 /* FILM STRIP TRACK */
 
 .film-track{
+
   display:flex;
   align-items:center;
 
   gap:18px;
 
-  padding:70px 60px;
+  padding:70px 0;
 
   background:#000;
 
@@ -274,7 +275,10 @@ body {
 
   width:max-content;
 
-  animation:filmScroll 45s linear infinite;
+  transform:translateX(-25%);
+
+  animation:filmScroll 40s linear infinite;
+
 }
 
 /* PAUSE ON HOVER */
@@ -392,11 +396,11 @@ body {
 @keyframes filmScroll{
 
   0%{
-    transform:translateX(0);
+    transform:translateX(-25%);
   }
 
   100%{
-    transform:translateX(-50%);
+    transform:translateX(-75%);
   }
 
 }
@@ -408,13 +412,15 @@ body {
 @media (max-width:768px){
 
   .film-track{
-    gap:10px;
-    padding:60px 0px; /* removes side cutoff */
+    gap:12px;
+    padding:60px 0;
   }
 
   .film-frame{
 
-    width:100vw; /* FULL SCREEN WIDTH */
+    width:92vw;
+
+    min-width:92vw;
 
     max-width:none;
 
@@ -423,6 +429,8 @@ body {
     padding:34px 26px;
 
   }
+
+}
 
   .film-frame h3{
     font-size:30px;
