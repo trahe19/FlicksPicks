@@ -249,52 +249,16 @@ body {
 }
 
 /* ============================= */
-/* CINEMATIC FILM STRIP */
+/* FILM STRIP */
 /* ============================= */
 
 .film-wrapper{
+
+  position:relative;
   overflow:hidden;
   width:100%;
-  padding:60px 0 80px 0;
-  position:relative;
-}
-
-/* PROJECTOR LIGHT BEAMS */
-
-.film-wrapper::before,
-.film-wrapper::after{
-
-  content:"";
-
-  position:absolute;
-
-  top:-200px;
-  width:600px;
-  height:700px;
-
-  background:linear-gradient(
-    to bottom,
-    rgba(0,255,255,0.25),
-    rgba(0,255,255,0.1),
-    transparent
-  );
-
-  filter:blur(120px);
-
-  pointer-events:none;
 
 }
-
-.film-wrapper::before{
-  left:-200px;
-  transform:rotate(15deg);
-}
-
-.film-wrapper::after{
-  right:-200px;
-  transform:rotate(-15deg);
-}
-
 
 /* FILM STRIP TRACK */
 
@@ -303,9 +267,9 @@ body {
   display:flex;
   align-items:center;
 
-  gap:16px;
+  gap:14px;
 
-  padding:80px 160px;
+  padding:60px 120px;
 
   background:#000;
 
@@ -313,10 +277,9 @@ body {
 
   width:max-content;
 
-  animation:filmScroll 60s linear infinite;
+  animation:filmScroll 55s linear infinite;
 
 }
-
 
 /* SPROCKET HOLES */
 
@@ -327,41 +290,40 @@ body {
 
   position:absolute;
 
-  left:140px;
-  right:140px;
+  left:120px;
+  right:120px;
 
-  height:26px;
+  height:22px;
 
   background:
   repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 24px,
-    white 24px,
-    white 42px
+    transparent 18px,
+    white 18px,
+    white 34px
   );
 
 }
 
 .film-track::before{
-  top:0;
+  top:6px;
 }
 
 .film-track::after{
-  bottom:0;
+  bottom:6px;
 }
 
-
-/* FILM FRAME */
+/* FILM FRAMES */
 
 .film-frame{
 
-  width:580px;
-  height:340px;
+  width:560px;
+  height:320px;
 
-  padding:56px 64px;
+  padding:50px 60px;
 
-  background:#f7f7f7;
+  background:#f6f6f6;
 
   color:black;
 
@@ -374,108 +336,53 @@ body {
 
   text-align:center;
 
-  position:relative;
-
-  transition:all .25s ease;
-
 }
-
-
-/* HOVER EFFECT */
-
-.film-frame:hover{
-
-  transform:translateY(-6px) scale(1.03);
-
-  box-shadow:
-  0 0 40px rgba(0,255,255,0.35),
-  0 0 80px rgba(0,255,255,0.2);
-
-}
-
 
 /* ACT LABEL */
 
 .act{
 
   font-size:20px;
-
   letter-spacing:10px;
-
-  margin-bottom:18px;
-
-  font-weight:600;
+  margin-bottom:16px;
 
 }
-
 
 /* TITLE */
 
 .film-frame h3{
 
-  font-size:46px;
-
-  margin-bottom:18px;
-
-  line-height:1.05;
-
-  white-space:nowrap;
+  font-size:44px;
+  margin-bottom:16px;
 
 }
-
 
 /* BODY */
 
 .film-frame p{
 
-  font-size:19px;
-
-  line-height:1.6;
-
-  max-width:440px;
+  font-size:18px;
+  line-height:1.55;
+  max-width:420px;
 
 }
 
-
 /* FILM GRAIN */
 
-.film-wrapper::after{
-
-  content:"";
+.grain{
 
   position:absolute;
-
   inset:0;
 
   background-image:url("https://grainy-gradients.vercel.app/noise.svg");
 
-  opacity:.12;
+  opacity:.18;
 
   pointer-events:none;
 
 }
 
-
-/* PROJECTOR FLICKER */
-
-.film-wrapper{
-
-  animation:projectorFlicker 6s infinite;
-
-}
-
-@keyframes projectorFlicker{
-
-  0%{filter:brightness(1);}
-  5%{filter:brightness(1.03);}
-  10%{filter:brightness(0.98);}
-  15%{filter:brightness(1.02);}
-  100%{filter:brightness(1);}
-
-}
-
-
-/* FILM SCROLL */
+/* SCROLL */
 
 @keyframes filmScroll{
 
@@ -486,76 +393,5 @@ body {
   100%{
     transform:translateX(-50%);
   }
-
-}
-
-
-/* LIGHT SWEEP */
-
-.film-frame::after{
-
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:-120%;
-
-  width:120%;
-  height:100%;
-
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-
-  animation:lightSweep 8s infinite;
-
-}
-
-@keyframes lightSweep{
-
-  0%{left:-120%}
-  100%{left:120%}
-
-}
-
-
-/* SPINNING FILM REELS */
-
-.film-wrapper::marker{display:none;}
-
-.reel-left,
-.reel-right{
-
-  position:absolute;
-
-  top:50%;
-  width:90px;
-  height:90px;
-
-  border:6px solid rgba(255,255,255,.25);
-  border-radius:50%;
-
-  transform:translateY(-50%);
-
-  animation:reelSpin 12s linear infinite;
-
-}
-
-.reel-left{
-  left:40px;
-}
-
-.reel-right{
-  right:40px;
-}
-
-@keyframes reelSpin{
-
-  from{transform:translateY(-50%) rotate(0deg);}
-  to{transform:translateY(-50%) rotate(360deg);}
 
 }
