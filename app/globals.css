@@ -254,7 +254,7 @@ body {
 
   gap:10px;
 
-  padding:70px 120px;
+  padding:40px 120px;
 
   background:#000;
 
@@ -262,7 +262,9 @@ body {
 
   position:relative;
 
-  animation:filmScroll 34s linear infinite;
+  height:260px;   /* LOCK FILM HEIGHT */
+
+ animation: filmScroll 34s linear infinite, filmJitter 0.4s infinite;
 }
 
 /* ===== SPROCKET HOLES (PART OF FILM STRIP) ===== */
@@ -291,11 +293,11 @@ body {
 }
 
 .film-track::before{
-  top:10px;
+  top:6px;
 }
 
 .film-track::after{
-  bottom:10px;
+  bottom:6px;
 }
 
 /* ===== FILM FRAME ===== */
@@ -304,7 +306,9 @@ body {
 
   width:360px;
 
-  padding:46px 40px;
+  height:180px; /* consistent frame window */
+
+  padding:24px 32px;
 
   background:white;
 
@@ -312,6 +316,10 @@ body {
 
   border-left:8px solid black;
   border-right:8px solid black;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 
   transition:all .35s ease;
 
@@ -330,13 +338,13 @@ body {
 /* ===== TEXT ===== */
 
 .film-frame h3{
-  font-size:30px;
-  margin-bottom:14px;
+  font-size:28px;
+  margin-bottom:8px;
 }
 
 .film-frame p{
-  font-size:18px;
-  line-height:1.6;
+  font-size:16px;
+  line-height:1.4;
 }
 
 .act{
@@ -356,6 +364,23 @@ body {
 
   100%{
     transform:translateX(-50%);
+  }
+
+}
+/* ===== PROJECTOR FILM JITTER ===== */
+
+@keyframes filmJitter{
+
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(1px);
+  }
+
+  100%{
+    transform: translateY(0);
   }
 
 }
