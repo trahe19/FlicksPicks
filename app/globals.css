@@ -261,22 +261,35 @@ body {
 /* FILM STRIP TRACK */
 
 .film-track{
+
   display:flex;
   align-items:center;
 
-  gap:14px;                 /* REDUCED space between cards */
+  gap:18px;
 
-  padding:45px 180px;      /* slightly more space from sprockets */
+  padding:90px 160px;
 
   background:#000;
+
   position:relative;
 
   width:max-content;
-  height:420px;
 
-  animation:filmScroll 40s linear infinite;
+  animation:filmScroll 60s linear infinite;
+
 }
 
+@keyframes filmScroll{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
+}
 
 /* SPROCKET HOLES */
 
@@ -374,13 +387,3 @@ body {
 
 }
 
-/* FILM SCROLL */
-
-@keyframes filmScroll{
-  0%{
-    transform:translateX(0);
-  }
-  100%{
-    transform:translateX(-50%);
-  }
-}
