@@ -265,7 +265,7 @@ body {
 
   display:flex;
 
-  align-items:center;   /* centers cards vertically */
+  align-items:center;
 
   gap:28px;
 
@@ -284,7 +284,7 @@ body {
 }
 
 
-/* SPROCKET HOLES */
+/* SPROCKET HOLES (ROUNDED) */
 
 .film-track::before,
 .film-track::after{
@@ -296,16 +296,13 @@ body {
   left:160px;
   right:160px;
 
-  height:14px;
+  height:18px;
 
   background:
-  repeating-linear-gradient(
-    to right,
-    transparent 0px,
-    transparent 24px,
-    white 24px,
-    white 42px
-  );
+  radial-gradient(circle, white 6px, transparent 7px)
+  repeat-x;
+
+  background-size:34px 18px;
 
 }
 
@@ -322,11 +319,11 @@ body {
 
 .film-frame{
 
-  width:680px;
+  width:700px;
 
-  height:300px;
+  height:360px;   /* MUCH taller to reduce margin */
 
-  padding:40px 60px;
+  padding:50px 70px;
 
   background:white;
 
@@ -353,11 +350,11 @@ body {
 
 .act{
 
-  font-size:20px;
+  font-size:22px;
 
   letter-spacing:8px;
 
-  margin-bottom:14px;
+  margin-bottom:18px;
 
   font-weight:700;
 
@@ -368,9 +365,9 @@ body {
 
 .film-frame h3{
 
-  font-size:34px;
+  font-size:38px;
 
-  margin-bottom:16px;
+  margin-bottom:18px;
 
   line-height:1.2;
 
@@ -381,11 +378,11 @@ body {
 
 .film-frame p{
 
-  font-size:20px;
+  font-size:22px;
 
-  line-height:1.5;
+  line-height:1.55;
 
-  max-width:560px;
+  max-width:580px;
 
 }
 
