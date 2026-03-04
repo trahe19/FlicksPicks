@@ -86,7 +86,8 @@ How It Works
 </h2>
 
 <div className="film-wrapper">
-
+<div className="reel-left"></div>
+<div className="reel-right"></div>
 <div className="film-track">
 
 {/* ACT I */}
