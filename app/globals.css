@@ -284,7 +284,7 @@ body {
 }
 
 
-/* SPROCKET HOLES (ROUNDED) */
+/* SPROCKET HOLES (ROUNDED RECTANGLES) */
 
 .film-track::before,
 .film-track::after{
@@ -299,10 +299,17 @@ body {
   height:18px;
 
   background:
-  radial-gradient(circle, white 6px, transparent 7px)
-  repeat-x;
+  repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 20px,
+    white 20px,
+    white 34px,
+    transparent 34px,
+    transparent 54px
+  );
 
-  background-size:34px 18px;
+  border-radius:6px;
 
 }
 
@@ -318,10 +325,10 @@ body {
 /* FILM FRAMES */
 
 .film-frame{
+  box-shadow:0 15px 50px rgba(0,0,0,.35);
+  width:720px;
 
-  width:700px;
-
-  height:360px;   /* MUCH taller to reduce margin */
+  height:360px;
 
   padding:50px 70px;
 
@@ -350,13 +357,17 @@ body {
 
 .act{
 
+  font-family:"Orbitron", sans-serif;
+
   font-size:22px;
 
-  letter-spacing:8px;
+  letter-spacing:10px;
 
   margin-bottom:18px;
 
   font-weight:700;
+
+  opacity:.7;
 
 }
 
@@ -365,11 +376,15 @@ body {
 
 .film-frame h3{
 
-  font-size:38px;
+  font-family:"Bebas Neue", sans-serif;
 
-  margin-bottom:18px;
+  font-size:48px;
 
-  line-height:1.2;
+  letter-spacing:1px;
+
+  margin-bottom:16px;
+
+  line-height:1.1;
 
 }
 
@@ -378,11 +393,13 @@ body {
 
 .film-frame p{
 
+  font-family:"Oswald", sans-serif;
+
   font-size:22px;
 
-  line-height:1.55;
+  line-height:1.6;
 
-  max-width:580px;
+  max-width:600px;
 
 }
 
