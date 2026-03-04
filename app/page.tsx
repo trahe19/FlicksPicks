@@ -79,9 +79,9 @@ export default function HomePage() {
 
 {/* ===== FILM STRIP HOW IT WORKS ===== */}
 
-<section className="w-full mt-12 mb-32 overflow-hidden">
+<section className="w-full mt-8 mb-32 overflow-hidden">
 
-<h2 className={`text-5xl mb-16 text-center tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+<h2 className={`text-5xl mb-20 text-center tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
 </h2>
 
@@ -90,7 +90,7 @@ How It Works
 <div className="film-track">
 
 {/* ACT I */}
-<div className="film-card">
+<div className="film-frame">
 <div className="act">ACT I</div>
 <h3>Draft</h3>
 <p>
@@ -100,7 +100,7 @@ Balance box-office blockbusters with Oscar contenders.
 </div>
 
 {/* ACT II */}
-<div className="film-card">
+<div className="film-frame">
 <div className="act">ACT II</div>
 <h3>Movies Hit Theaters</h3>
 <p>
@@ -110,22 +110,21 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 </div>
 
 {/* ACT III */}
-<div className="film-card">
+<div className="film-frame">
 <div className="act">ACT III</div>
 <h3>Win Monthly Matchups</h3>
 <p>
 Every month your starters face another team head-to-head.
-Manage your roster, make waiver-wire pickups, and stack up wins.
+Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
 </p>
 </div>
 
 {/* ACT IV */}
-<div className="film-card">
+<div className="film-frame">
 <div className="act">ACT IV</div>
 <h3>The Academy Cup</h3>
 <p>
-The season culminates on Oscar night.
-If your movies, actors, or directors win Academy Awards,
+The season culminates on Oscar night. If your movies, actors, or directors win Academy Awards,
 you score championship FlicksPoints.
 </p>
 </div>
