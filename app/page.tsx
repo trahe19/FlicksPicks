@@ -81,7 +81,7 @@ export default function HomePage() {
 
 <section className="w-full mt-20 mb-24 overflow-hidden">
 
-<h2 className={`text-5xl mb-10 text-center tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+<h2 className={`text-4xl md:text-6xl mb-10 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
 </h2>
 
