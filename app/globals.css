@@ -276,26 +276,33 @@ body {
   animation:filmScroll 40s linear infinite;
 }
 
+
 /* SPROCKET HOLES */
 
 .film-track::before,
 .film-track::after{
+
   content:"";
   position:absolute;
 
   left:160px;
   right:160px;
 
-  height:22px;
+  height:26px;
+
+  display:flex;
+  justify-content:space-between;
 
   background:
   repeating-linear-gradient(
     to right,
-    #000 0px,
-    #000 18px,
+    transparent 0px,
     transparent 18px,
-    transparent 36px
+    white 18px,
+    white 38px
   );
+
+  border-radius:12px;
 
 }
 
@@ -307,34 +314,11 @@ body {
   bottom:0;
 }
 
-/* ROUNDED PERFORATION SHAPE */
-
-.film-track::before,
-.film-track::after{
-  -webkit-mask:
-    repeating-linear-gradient(
-      to right,
-      transparent 0px,
-      transparent 18px,
-      black 18px,
-      black 36px
-    );
-
-  mask:
-    repeating-linear-gradient(
-      to right,
-      transparent 0px,
-      transparent 18px,
-      black 18px,
-      black 36px
-    );
-
-  border-radius:8px;
-}
 
 /* FILM FRAMES */
 
 .film-frame{
+
   width:720px;
   height:360px;
 
@@ -366,6 +350,7 @@ body {
     0 20px 60px rgba(0,0,0,.35);
 }
 
+
 /* ACT LABEL */
 
 .act{
@@ -377,6 +362,7 @@ body {
   color:#555;
 }
 
+
 /* CARD TITLE */
 
 .film-frame h3{
@@ -387,6 +373,7 @@ body {
   line-height:1.05;
 }
 
+
 /* DESCRIPTION */
 
 .film-frame p{
@@ -395,6 +382,7 @@ body {
   line-height:1.65;
   max-width:620px;
 }
+
 
 /* FILM SCROLL */
 
