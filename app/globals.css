@@ -249,7 +249,7 @@ body {
 }
 
 /* ============================= */
-/* VINTAGE FILM STRIP */
+/* FILM STRIP */
 /* ============================= */
 
 .film-wrapper{
@@ -258,67 +258,44 @@ body {
   padding:40px 0 50px 0;
 }
 
-
 /* FILM STRIP TRACK */
 
 .film-track{
-
   display:flex;
-
   align-items:center;
-
   gap:28px;
 
   padding:35px 180px;
 
   background:#000;
-
   position:relative;
 
   width:max-content;
-
   height:420px;
 
   animation:filmScroll 40s linear infinite;
-
 }
 
-
-/* SPROCKET HOLES (ROUNDED RECTANGLE CUTOUTS) */
+/* SPROCKET HOLES */
 
 .film-track::before,
 .film-track::after{
-
   content:"";
-
   position:absolute;
 
   left:160px;
   right:160px;
 
-  height:20px;
+  height:22px;
 
   background:
   repeating-linear-gradient(
     to right,
-    black 0px,
-    black 18px,
+    #000 0px,
+    #000 18px,
     transparent 18px,
-    transparent 36px,
-    black 36px,
-    black 54px
+    transparent 36px
   );
-
-  mask:
-  repeating-linear-gradient(
-    to right,
-    transparent 0px,
-    transparent 18px,
-    black 18px,
-    black 36px
-  );
-
-  border-radius:8px;
 
 }
 
@@ -330,13 +307,35 @@ body {
   bottom:0;
 }
 
+/* ROUNDED PERFORATION SHAPE */
+
+.film-track::before,
+.film-track::after{
+  -webkit-mask:
+    repeating-linear-gradient(
+      to right,
+      transparent 0px,
+      transparent 18px,
+      black 18px,
+      black 36px
+    );
+
+  mask:
+    repeating-linear-gradient(
+      to right,
+      transparent 0px,
+      transparent 18px,
+      black 18px,
+      black 36px
+    );
+
+  border-radius:8px;
+}
 
 /* FILM FRAMES */
 
 .film-frame{
-
   width:720px;
-
   height:360px;
 
   padding:55px 70px;
@@ -356,7 +355,6 @@ body {
   flex-direction:column;
 
   justify-content:flex-start;
-
   align-items:center;
 
   text-align:center;
@@ -364,73 +362,47 @@ body {
   box-sizing:border-box;
 
   box-shadow:
-  inset 0 0 40px rgba(0,0,0,.12),
-  0 20px 60px rgba(0,0,0,.35);
-
+    inset 0 0 40px rgba(0,0,0,.12),
+    0 20px 60px rgba(0,0,0,.35);
 }
-
 
 /* ACT LABEL */
 
 .act{
-
   font-family:"Orbitron", sans-serif;
-
   font-size:22px;
-
   letter-spacing:12px;
-
   margin-bottom:20px;
-
   font-weight:700;
-
   color:#555;
-
 }
-
 
 /* CARD TITLE */
 
 .film-frame h3{
-
   font-family:"Bebas Neue", sans-serif;
-
   font-size:54px;
-
   letter-spacing:2px;
-
   margin-bottom:18px;
-
   line-height:1.05;
-
 }
-
 
 /* DESCRIPTION */
 
 .film-frame p{
-
   font-family:"Oswald", sans-serif;
-
   font-size:22px;
-
   line-height:1.65;
-
   max-width:620px;
-
 }
-
 
 /* FILM SCROLL */
 
 @keyframes filmScroll{
-
   0%{
     transform:translateX(0);
   }
-
   100%{
     transform:translateX(-50%);
   }
-
 }
