@@ -114,7 +114,7 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 {/* ACT III */}
 <div className="film-frame">
 <div className="act">ACT III</div>
-<h3 className={playfair.className}>Win Monthly Matchups</h3>
+<h3 className={playfair.className}>Monthly Matchups</h3>
 <p>
 Every month your starters face another team head-to-head.
 Manage your roster, make waiver-wire pickups, and stack up wins.
