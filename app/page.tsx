@@ -117,7 +117,7 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 <h3 className={orbitron.className}>Matchups</h3>
 <p>
 Every month your starters face another team head-to-head.
-Manage your roster, make waiver-wire pickups, and stack up wins.
+Manage your roster, make waiver-wire pickups, and stack up wins to make championship.
 </p>
 </div>
 
@@ -159,7 +159,7 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 <h3 className={orbitron.className}>Matchups</h3>
 <p>
 Every month your starters face another team head-to-head.
-Manage your roster, make waiver-wire pickups, and stack up wins.
+Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
 </p>
 </div>
 
