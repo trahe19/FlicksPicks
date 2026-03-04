@@ -104,7 +104,7 @@ Balance box-office blockbusters with Oscar contenders.
 {/* ACT II */}
 <div className="film-frame">
 <div className="act">ACT II</div>
-<h3 className={orbitron.className}>Movies Hit Theaters</h3>
+<h3 className={orbitron.className}>Score</h3>
 <p>
 Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
 Actors and directors earn FlicksPoints from the movies they’re part of.
@@ -114,7 +114,7 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 {/* ACT III */}
 <div className="film-frame">
 <div className="act">ACT III</div>
-<h3 className={orbitron.className}>Monthly Matchups</h3>
+<h3 className={orbitron.className}>Matchups</h3>
 <p>
 Every month your starters face another team head-to-head.
 Manage your roster, make waiver-wire pickups, and stack up wins.
@@ -124,7 +124,7 @@ Manage your roster, make waiver-wire pickups, and stack up wins.
 {/* ACT IV */}
 <div className="film-frame">
 <div className="act">ACT IV</div>
-<h3 className={orbitron.className}>The Academy Cup</h3>
+<h3 className={orbitron.className}>Championship</h3>
 <p>
 The season culminates on Oscar night. If your movies, actors, or directors
 win Academy Awards, you score championship FlicksPoints.
@@ -146,7 +146,7 @@ Balance box-office blockbusters with Oscar contenders.
 {/* ACT II */}
 <div className="film-frame">
 <div className="act">ACT II</div>
-<h3 className={orbitron.className}>Movies Hit Theaters</h3>
+<h3 className={orbitron.className}>Score</h3>
 <p>
 Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
 Actors and directors earn FlicksPoints from the movies they’re part of.
@@ -156,7 +156,7 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 {/* ACT III */}
 <div className="film-frame">
 <div className="act">ACT III</div>
-<h3 className={orbitron.className}>Win Monthly Matchups</h3>
+<h3 className={orbitron.className}>Matchups</h3>
 <p>
 Every month your starters face another team head-to-head.
 Manage your roster, make waiver-wire pickups, and stack up wins.
@@ -166,7 +166,7 @@ Manage your roster, make waiver-wire pickups, and stack up wins.
 {/* ACT IV */}
 <div className="film-frame">
 <div className="act">ACT IV</div>
-<h3 className={orbitron.className}>The Academy Cup</h3>
+<h3 className={orbitron.className}>Championship</h3>
 <p>
 The season culminates on Oscar night. If your movies, actors, or directors
 win Academy Awards, you score championship FlicksPoints.
