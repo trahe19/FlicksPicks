@@ -79,7 +79,7 @@ export default function HomePage() {
 
 {/* ===== FILM STRIP HOW IT WORKS ===== */}
 
-<section className="w-full mt-8 mb-24 bg-black pt-16 pb-20">
+<section className="relative w-full mt-2 mb-24 overflow-hidden bg-black py-20 -mx-6 px-6">
 
 <h2 className={`text-4xl md:text-6xl mb-10 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
