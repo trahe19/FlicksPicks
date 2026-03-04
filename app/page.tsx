@@ -178,7 +178,7 @@ you score championship FlicksPoints.
 {/* Main CTA */}
 <a
   href="/join"
-  className={`mt-12 bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] ${oswald.className}`}
+  className={`relative z-20 mt-12 bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] ${oswald.className}`}
 >
   Join The Waitlist
 </a>
