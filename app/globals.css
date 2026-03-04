@@ -239,25 +239,25 @@ body {
 }
 
 /* ============================= */
-/* FILM STRIP */
+/* FILM STRIP SECTION */
 /* ============================= */
 
 .film-wrapper{
   overflow:hidden;
   width:100%;
-  padding:80px 0;
+  padding:40px 0 60px 0;
 }
 
-/* MAIN FILM */
+/* MAIN FILM STRIP */
 
 .film-track{
 
   display:flex;
   align-items:center;
 
-  gap:14px;
+  gap:22px;
 
-  padding:60px 120px;
+  padding:120px 200px;
 
   background:#000;
 
@@ -265,9 +265,9 @@ body {
 
   width:max-content;
 
-  height:240px;
+  height:420px;
 
-  animation:filmScroll 34s linear infinite;
+  animation:filmScroll 38s linear infinite;
 }
 
 /* SPROCKET HOLES */
@@ -279,18 +279,18 @@ body {
 
   position:absolute;
 
-  left:0;
-  right:0;
+  left:120px;
+  right:120px;
 
-  height:18px;
+  height:28px;
 
   background:
   repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 18px,
-    white 18px,
-    white 28px
+    transparent 26px,
+    white 26px,
+    white 46px
   );
 
 }
@@ -307,18 +307,18 @@ body {
 
 .film-frame{
 
-  width:360px;
+  width:520px;
 
-  height:160px;
+  height:240px;
 
-  padding:28px 34px;
+  padding:40px 60px;
 
   background:white;
 
   color:black;
 
-  border-left:10px solid black;
-  border-right:10px solid black;
+  border-left:14px solid black;
+  border-right:14px solid black;
 
   display:flex;
   flex-direction:column;
@@ -331,13 +331,13 @@ body {
 
 }
 
-/* HOVER */
+/* FRAME HOVER */
 
 .film-frame:hover{
 
-  transform:translateY(-4px);
+  transform:translateY(-6px);
 
-  box-shadow:0 0 40px rgba(0,255,255,0.35);
+  box-shadow:0 0 60px rgba(0,255,255,0.35);
 
 }
 
@@ -345,11 +345,11 @@ body {
 
 .act{
 
-  font-size:15px;
+  font-size:18px;
 
-  letter-spacing:6px;
+  letter-spacing:8px;
 
-  margin-bottom:8px;
+  margin-bottom:10px;
 
   font-weight:600;
 
@@ -359,9 +359,9 @@ body {
 
 .film-frame h3{
 
-  font-size:26px;
+  font-size:34px;
 
-  margin-bottom:8px;
+  margin-bottom:12px;
 
 }
 
@@ -369,15 +369,15 @@ body {
 
 .film-frame p{
 
-  font-size:15px;
+  font-size:18px;
 
-  line-height:1.45;
+  line-height:1.5;
 
-  max-width:280px;
+  max-width:380px;
 
 }
 
-/* SCROLL */
+/* FILM SCROLL */
 
 @keyframes filmScroll{
 
