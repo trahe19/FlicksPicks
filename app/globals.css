@@ -299,3 +299,27 @@ body {
     transform: translateY(40px) scale(1.15);
   }
 }
+.film-strip::before,
+.film-strip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background:
+  repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 30px,
+    black 30px,
+    black 40px
+  );
+}
+
+.film-strip::before {
+  top: -20px;
+}
+
+.film-strip::after {
+  bottom: -20px;
+}
