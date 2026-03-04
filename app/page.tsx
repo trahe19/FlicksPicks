@@ -81,7 +81,7 @@ export default function HomePage() {
 
 <section className="relative w-full mt-8 mb-24 pt-16 pb-20">
 
-<div className="absolute inset-0 bg-black left-1/2 -translate-x-1/2 w-screen"></div>
+<div className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-[200vh] bg-black"></div>
 
 <div className="relative z-10">
 
