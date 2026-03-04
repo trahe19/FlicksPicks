@@ -364,11 +364,10 @@ body {
 /* CARD TITLE */
 
 .film-frame h3{
-  font-family:"Bebas Neue", sans-serif;
-  font-size:54px;
-  letter-spacing:2px;
+  font-size:46px;
+  letter-spacing:1px;
   margin-bottom:18px;
-  line-height:1.05;
+  line-height:1.1;
 }
 
 
