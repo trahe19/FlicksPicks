@@ -243,50 +243,91 @@ body {
 .film-wrapper{
   overflow:hidden;
   width:100%;
-  position:relative;
-  padding:100px 0;
+  padding:80px 0;
 }
 
 /* ===== FILM STRIP ===== */
 
 .film-track{
   display:flex;
-  gap:8px;
-  padding:80px 120px;
+  align-items:center;
+
+  gap:10px;
+
+  padding:70px 120px;
 
   background:#000;
 
   width:max-content;
 
-  animation:filmScroll 32s linear infinite;
+  position:relative;
+
+  animation:filmScroll 34s linear infinite;
 }
 
-/* ===== FILM FRAMES ===== */
+/* ===== SPROCKET HOLES (PART OF FILM STRIP) ===== */
+
+.film-track::before,
+.film-track::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+
+  height:28px;
+
+  background:
+  repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 18px,
+    white 18px,
+    white 34px
+  );
+
+}
+
+.film-track::before{
+  top:10px;
+}
+
+.film-track::after{
+  bottom:10px;
+}
+
+/* ===== FILM FRAME ===== */
 
 .film-frame{
 
-  width:380px;
-  padding:28px;
+  width:360px;
+
+  padding:46px 40px;
 
   background:white;
 
   color:black;
 
-  border:8px solid black;
+  border-left:8px solid black;
+  border-right:8px solid black;
 
   transition:all .35s ease;
-margin:0 12px;
+
 }
+
+/* ===== FRAME HOVER ===== */
 
 .film-frame:hover{
 
   transform:translateY(-8px) scale(1.03);
 
-  box-shadow:0 0 50px rgba(0,255,255,0.45);
+  box-shadow:0 0 50px rgba(0,255,255,0.4);
 
 }
 
-/* ===== FRAME TEXT ===== */
+/* ===== TEXT ===== */
 
 .film-frame h3{
   font-size:30px;
@@ -298,46 +339,11 @@ margin:0 12px;
   line-height:1.6;
 }
 
-/* ===== ACT LABEL ===== */
-
 .act{
   font-size:16px;
   letter-spacing:5px;
   margin-bottom:10px;
   font-weight:bold;
-}
-
-/* ===== SPROCKET HOLES ===== */
-
-.film-wrapper::before,
-.film-wrapper::after{
-
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  right:0;
-
-  height:40px;
-
-  background:
-  repeating-linear-gradient(
-    to right,
-    white 0px,
-    white 18px,
-    black 18px,
-    black 42px
-  );
-
-}
-
-.film-wrapper::before{
-  top:40px;
-}
-
-.film-wrapper::after{
-  bottom:40px;
 }
 
 /* ===== AUTO SCROLL ===== */
