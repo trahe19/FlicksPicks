@@ -71,54 +71,67 @@ export default function HomePage() {
     <span className="cinematic-text delay-400">Camera.</span>{" "}
     <span className="cinematic-text delay-800">Draft.</span>
   </p>
+      
+<div className="w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-24"></div>
 
-      {/* ===== HOW IT WORKS ===== */}
-<section className="w-full max-w-6xl mt-24 mb-24 px-6">
+    {/* ===== DIVIDER ===== */}
+<div className="w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-24"></div>
 
-  <h2 className={`text-4xl md:text-5xl mb-12 tracking-widest uppercase ${orbitron.className}`}>
+{/* ===== HOW IT WORKS ===== */}
+<section className="relative w-full max-w-6xl mb-24 px-6">
+
+  {/* Spotlight Glow */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.08),transparent_60%)] pointer-events-none"></div>
+
+  <h2 className={`text-4xl md:text-5xl mb-10 tracking-[0.25em] uppercase neon-text ${orbitron.className}`}>
     How FlicksPicks Works
   </h2>
 
-  <p className={`text-xl text-gray-300 mb-16 max-w-3xl mx-auto ${oswald.className}`}>
-    Draft movies, actors, and directors. Compete monthly on box office and reviews.
-    Win your league on Oscar night.
+  <p className={`text-xl text-gray-300 mb-20 max-w-3xl mx-auto leading-relaxed ${oswald.className}`}>
+    Draft movies, actors, and directors. Compete monthly using box office
+    performance, critic scores, and awards season.
+    <span className="text-white"> Win your league on Oscar night.</span>
   </p>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-    {/* Card 1 */}
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition">
-      <h3 className="text-2xl mb-4">🎬 Draft Your Film Team</h3>
-      <p className="text-gray-300">
+    {/* CARD 1 */}
+    <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(0,255,255,0.25)]">
+      <div className="text-4xl mb-4">🎬</div>
+      <h3 className="text-2xl mb-4">Draft Your Film Team</h3>
+      <p className="text-gray-300 leading-relaxed">
         Build a roster of upcoming movies, actors, and directors releasing this year.
         Balance blockbuster hits with Oscar contenders.
       </p>
     </div>
 
-    {/* Card 2 */}
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition">
-      <h3 className="text-2xl mb-4">📊 Score From Box Office & Reviews</h3>
-      <p className="text-gray-300">
-        Movies earn points from box office profit, IMDb, Rotten Tomatoes, and
-        Letterboxd ratings. Actors and directors score from the films they're in.
+    {/* CARD 2 */}
+    <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(0,255,255,0.25)]">
+      <div className="text-4xl mb-4">📊</div>
+      <h3 className="text-2xl mb-4">Score From Box Office & Reviews</h3>
+      <p className="text-gray-300 leading-relaxed">
+        Movies earn points from box office profit, IMDb, Rotten Tomatoes,
+        and Letterboxd ratings. Actors and directors score from the films they appear in.
       </p>
     </div>
 
-    {/* Card 3 */}
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition">
-      <h3 className="text-2xl mb-4">⚔️ Win Monthly Matchups</h3>
-      <p className="text-gray-300">
-        Each month your starting movie faces another player. Manage your roster,
-        use the waiver wire, and win monthly matchups to reach the playoffs.
+    {/* CARD 3 */}
+    <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(0,255,255,0.25)]">
+      <div className="text-4xl mb-4">⚔️</div>
+      <h3 className="text-2xl mb-4">Win Monthly Matchups</h3>
+      <p className="text-gray-300 leading-relaxed">
+        Each month your starting movie competes head-to-head against another player.
+        Manage your roster and waiver wire to win as many matchups as possible.
       </p>
     </div>
 
-    {/* Card 4 */}
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition">
-      <h3 className="text-2xl mb-4">🏆 Championships on Oscar Night</h3>
-      <p className="text-gray-300">
+    {/* CARD 4 */}
+    <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(0,255,255,0.25)]">
+      <div className="text-4xl mb-4">🏆</div>
+      <h3 className="text-2xl mb-4">Championship on Oscar Night</h3>
+      <p className="text-gray-300 leading-relaxed">
         The season ends on Oscar night. If your movies, actors, or directors win
-        Academy Awards, you score championship points.
+        Academy Awards, you score championship points and compete for the title.
       </p>
     </div>
 
