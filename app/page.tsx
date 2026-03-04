@@ -129,6 +129,44 @@ you score championship FlicksPoints.
 </p>
 </div>
 
+{/* DUPLICATE FOR LOOP */}
+
+<div className="film-frame">
+<div className="act">ACT I</div>
+<h3>Draft</h3>
+<p>
+Build a roster of upcoming movies, actors, and directors releasing this year.
+Balance box-office blockbusters with Oscar contenders.
+</p>
+</div>
+
+<div className="film-frame">
+<div className="act">ACT II</div>
+<h3>Movies Hit Theaters</h3>
+<p>
+Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
+Actors and directors earn FlicksPoints from the movies they’re part of.
+</p>
+</div>
+
+<div className="film-frame">
+<div className="act">ACT III</div>
+<h3>Win Monthly Matchups</h3>
+<p>
+Every month your starters face another team head-to-head.
+Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
+</p>
+</div>
+
+<div className="film-frame">
+<div className="act">ACT IV</div>
+<h3>The Academy Cup</h3>
+<p>
+The season culminates on Oscar night. If your movies, actors, or directors win Academy Awards,
+you score championship FlicksPoints.
+</p>
+</div>
+
 </div>
 </div>
 
