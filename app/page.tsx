@@ -77,103 +77,60 @@ export default function HomePage() {
     <span className="cinematic-text delay-800">Draft.</span>
   </p>
 
-  {/* ===== DIVIDER ===== */}
-<div className="w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16"></div>
+ <section className="w-full overflow-hidden mt-16 mb-32">
 
-{/* ===== GAMEPLAY SECTION ===== */}
-<section className="relative w-full max-w-6xl mb-32 px-6">
+<h2 className={`text-5xl mb-16 tracking-[0.3em] uppercase neon-text text-center ${orbitron.className}`}>
+  How It Works
+</h2>
 
- <h2 className={`text-5xl md:text-6xl mb-24 tracking-[0.35em] uppercase neon-text ${orbitron.className}`}>
-    How it Works
-  </h2>
+<div className="film-container">
 
- <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+<div className="film-strip">
 
 {/* ACT I */}
-<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
-
-  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
-    ACT I
-  </div>
-
-  <img src="/icons/draft.svg" className="w-12 mb-6 opacity-80"/>
-
-  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
-    Draft
-  </h3>
-
-  <p className="text-lg text-gray-300 leading-relaxed">
-    Build a roster of upcoming movies, actors, and directors releasing this year. 
+<div className="film-frame">
+  <div className="act">ACT I</div>
+  <h3 className="frame-title">Draft</h3>
+  <p>
+    Build a roster of upcoming movies, actors, and directors releasing this year.
     Balance box-office blockbusters with Oscar contenders.
   </p>
-
 </div>
 
-
 {/* ACT II */}
-<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
-
-  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
-    ACT II
-  </div>
-
-  <img src="/icons/theater.svg" className="w-12 mb-6 opacity-80"/>
-
-  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
-    Movies Hit Theaters
-  </h3>
-
-  <p className="text-lg text-gray-300 leading-relaxed">
+<div className="film-frame">
+  <div className="act">ACT II</div>
+  <h3 className="frame-title">Movies Hit Theaters</h3>
+  <p>
     Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
     Actors and directors earn FlicksPoints from the movies they’re part of.
   </p>
-
 </div>
-
 
 {/* ACT III */}
-<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
-
-  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
-    ACT III
-  </div>
-
-  <img src="/icons/matchup.svg" className="w-12 mb-6 opacity-80"/>
-
-  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
-    Win Monthly Matchups
-  </h3>
-
-  <p className="text-lg text-gray-300 leading-relaxed">
+<div className="film-frame">
+  <div className="act">ACT III</div>
+  <h3 className="frame-title">Win Monthly Matchups</h3>
+  <p>
     Every month your starters face another team head-to-head.
-    Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
+    Manage your roster, make waiver-wire pickups, and stack up wins.
   </p>
-
 </div>
 
-
 {/* ACT IV */}
-<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
-
-  <div className="text-cyan-400 text-4xl tracking-[0.5em] mb-6 font-bold">
-    ACT IV
-  </div>
-
-  <img src="/icons/oscar.svg" className="w-12 mb-6 opacity-80"/>
-
-  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
-    The Academy Cup
-  </h3>
-
-  <p className="text-lg text-gray-300 leading-relaxed">
+<div className="film-frame">
+  <div className="act">ACT IV</div>
+  <h3 className="frame-title">The Academy Cup</h3>
+  <p>
     The season culminates on Oscar night. If your movies, actors, or directors win Academy Awards,
     you score championship FlicksPoints.
   </p>
-
 </div>
 
 </div>
-  
+
+</div>
+
 </section>
       
   {/* Main CTA */}
