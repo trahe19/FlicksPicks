@@ -1,5 +1,11 @@
 import Image from "next/image";
 import { Orbitron, Oswald } from "next/font/google";
+import { Orbitron, Oswald, Bebas_Neue } from "next/font/google";
+
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -73,7 +79,7 @@ export default function HomePage() {
   </p>
 
   {/* ===== DIVIDER ===== */}
-<div className="w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-28"></div>
+<div className="w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-16"></div>
 
 {/* ===== GAMEPLAY SECTION ===== */}
 <section className="relative w-full max-w-6xl mb-32 px-6">
@@ -82,70 +88,93 @@ export default function HomePage() {
     How it Works
   </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
 
-    {/* ACT 1 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
+{/* ACT I */}
+<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
 
-
-     <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT I</div>
-
-       <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">Draft</h3>
-
-      <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-        Build a roster of upcoming movies, actors, and directors releasing this year.
-        Balance box-office blockbusters with Oscar contenders.
-      </p>
-
-    </div>
-
-    {/* ACT 2 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
-
-
-     <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT II</div>
-
-       <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">Movies Hit Theaters</h3>
-
-       <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-        Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
-        Actors and directors earn FlicksPoints from the movies they’re part of.
-      </p>
-
-    </div>
-
-    {/* ACT 3 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
-
-
-      <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT III</div>
-
-       <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">Win Monthly Matchups</h3>
-
-       <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-        Every month your starters face another team head-to-head.
-        Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
-      </p>
-
-    </div>
-
-    {/* ACT 4 */}
-    <div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-12 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
-
-
-      <div className="text-cyan-400 text-2xl md:text-3xl tracking-[0.5em] mb-6 font-bold">ACT IV</div>
-
-      <h3 className="text-4xl md:text-5xl mb-6 font-semibold leading-tight">The Academy Cup</h3>
-
-      <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-        The season culminates on Oscar night. If your movies, actors, or directors win
-        Academy Awards, you score championship FlicksPoints.
-      </p>
-
-    </div>
-
+  <div className="text-cyan-400 text-2xl tracking-[0.5em] mb-6 font-bold">
+    ACT I
   </div>
 
+  <img src="/icons/draft.svg" className="w-12 mb-6 opacity-80"/>
+
+  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
+    Draft
+  </h3>
+
+  <p className="text-lg text-gray-300 leading-relaxed">
+    Build a roster of upcoming movies, actors, and directors releasing this year. 
+    Balance box-office blockbusters with Oscar contenders.
+  </p>
+
+</div>
+
+
+{/* ACT II */}
+<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
+
+  <div className="text-cyan-400 text-2xl tracking-[0.5em] mb-6 font-bold">
+    ACT II
+  </div>
+
+  <img src="/icons/theater.svg" className="w-12 mb-6 opacity-80"/>
+
+  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
+    Movies Hit Theaters
+  </h3>
+
+  <p className="text-lg text-gray-300 leading-relaxed">
+    Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
+    Actors and directors earn FlicksPoints from the movies they’re part of.
+  </p>
+
+</div>
+
+
+{/* ACT III */}
+<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
+
+  <div className="text-cyan-400 text-2xl tracking-[0.5em] mb-6 font-bold">
+    ACT III
+  </div>
+
+  <img src="/icons/matchup.svg" className="w-12 mb-6 opacity-80"/>
+
+  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
+    Win Monthly Matchups
+  </h3>
+
+  <p className="text-lg text-gray-300 leading-relaxed">
+    Every month your starters face another team head-to-head.
+    Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
+  </p>
+
+</div>
+
+
+{/* ACT IV */}
+<div className="group relative border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl p-10 transition duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_0_60px_rgba(0,255,255,0.35)]">
+
+  <div className="text-cyan-400 text-2xl tracking-[0.5em] mb-6 font-bold">
+    ACT IV
+  </div>
+
+  <img src="/icons/oscar.svg" className="w-12 mb-6 opacity-80"/>
+
+  <h3 className={`text-3xl mb-4 tracking-wide ${bebas.className}`}>
+    The Academy Cup
+  </h3>
+
+  <p className="text-lg text-gray-300 leading-relaxed">
+    The season culminates on Oscar night. If your movies, actors, or directors win Academy Awards,
+    you score championship FlicksPoints.
+  </p>
+
+</div>
+
+</div>
+  
 </section>
       
   {/* Main CTA */}
