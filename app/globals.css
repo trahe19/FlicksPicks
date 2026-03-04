@@ -263,9 +263,10 @@ body {
 .film-track{
   display:flex;
   align-items:center;
-  gap:28px;
 
-  padding:35px 180px;
+  gap:14px;                 /* REDUCED space between cards */
+
+  padding:45px 180px;      /* slightly more space from sprockets */
 
   background:#000;
   position:relative;
@@ -288,21 +289,18 @@ body {
   left:160px;
   right:160px;
 
-  height:26px;
-
-  display:flex;
-  justify-content:space-between;
+  height:24px;
 
   background:
   repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 18px,
-    white 18px,
-    white 38px
+    transparent 20px,
+    white 20px,
+    white 36px
   );
 
-  border-radius:12px;
+  border-radius:10px;
 
 }
 
@@ -320,7 +318,7 @@ body {
 .film-frame{
 
   width:720px;
-  height:360px;
+  height:340px;
 
   padding:55px 70px;
 
