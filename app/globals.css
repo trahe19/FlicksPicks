@@ -239,34 +239,35 @@ body {
 }
 
 /* ============================= */
-/* FILM STRIP SECTION */
+/* FILM STRIP */
 /* ============================= */
 
 .film-wrapper{
   overflow:hidden;
   width:100%;
-  padding:60px 0;
+  padding:80px 0;
 }
 
-/* MAIN FILM STRIP */
+/* MAIN FILM */
 
 .film-track{
+
   display:flex;
   align-items:center;
 
-  gap:8px;
+  gap:14px;
 
-  padding:30px 120px;
+  padding:60px 120px;
 
   background:#000;
 
-  width:max-content;
-
   position:relative;
 
-  height:300px;
+  width:max-content;
 
-  animation: filmScroll 34s linear infinite;
+  height:240px;
+
+  animation:filmScroll 34s linear infinite;
 }
 
 /* SPROCKET HOLES */
@@ -281,86 +282,102 @@ body {
   left:0;
   right:0;
 
-  height:24px;
+  height:18px;
 
   background:
   repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 22px,
-    white 22px,
-    white 38px
+    transparent 18px,
+    white 18px,
+    white 28px
   );
 
 }
 
 .film-track::before{
-  top:8px;
+  top:0;
 }
 
 .film-track::after{
-  bottom:8px;
+  bottom:0;
 }
 
-/* FILM FRAME */
+/* FILM FRAMES */
 
 .film-frame{
 
   width:360px;
 
-  min-height:200px;
+  height:160px;
 
-  padding:30px 36px;
+  padding:28px 34px;
 
   background:white;
 
   color:black;
 
-  border-left:8px solid black;
-  border-right:8px solid black;
+  border-left:10px solid black;
+  border-right:10px solid black;
 
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items:center;
 
-  transition:all .3s ease;
+  text-align:center;
+
+  transition:all .25s ease;
 
 }
 
-/* FRAME HOVER */
+/* HOVER */
 
 .film-frame:hover{
 
-  transform:translateY(-6px);
+  transform:translateY(-4px);
 
-  box-shadow:0 0 50px rgba(0,255,255,0.35);
+  box-shadow:0 0 40px rgba(0,255,255,0.35);
 
 }
 
 /* ACT LABEL */
 
 .act{
-  font-size:16px;
+
+  font-size:15px;
+
   letter-spacing:6px;
-  margin-bottom:10px;
-  font-weight:bold;
+
+  margin-bottom:8px;
+
+  font-weight:600;
+
 }
 
 /* TITLE */
 
 .film-frame h3{
-  font-size:28px;
-  margin-bottom:10px;
+
+  font-size:26px;
+
+  margin-bottom:8px;
+
 }
 
 /* DESCRIPTION */
 
 .film-frame p{
-  font-size:16px;
+
+  font-size:15px;
+
   line-height:1.45;
+
+  max-width:280px;
+
 }
 
-/* FILM SCROLL */
+/* SCROLL */
 
 @keyframes filmScroll{
 
