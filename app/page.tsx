@@ -71,7 +71,7 @@ export default function HomePage() {
   </div>
 
  {/* Lights Camera Draft */}
-<p className={`text-4xl md:text-6xl mb-10 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+<p className={`text-4xl md:text-6xl mb-6 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
   <span className="cinematic-text">Lights.</span>{" "}
   <span className="cinematic-text delay-400">Camera.</span>{" "}
   <span className="cinematic-text delay-800">Draft.</span>
@@ -79,7 +79,7 @@ export default function HomePage() {
 
 {/* ===== FILM STRIP HOW IT WORKS ===== */}
 
-<section className="w-full mt-2 mb-24 overflow-hidden">
+<section className="w-full mt-20 mb-24 overflow-hidden">
 
 <h2 className={`text-5xl mb-10 text-center tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
