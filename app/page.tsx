@@ -71,8 +71,6 @@ export default function HomePage() {
     <span className="cinematic-text delay-400">Camera.</span>{" "}
     <span className="cinematic-text delay-800">Draft.</span>
   </p>
-      
-<div className="w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-24"></div>
 
     {/* ===== DIVIDER ===== */}
 <div className="w-full max-w-6xl h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-24"></div>
