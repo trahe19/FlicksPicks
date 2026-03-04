@@ -70,20 +70,21 @@ export default function HomePage() {
     </div>
   </div>
 
-  {/* Lights Camera Draft */}
-  <p className={`text-4xl md:text-6xl mb-16 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
-    <span className="cinematic-text">Lights.</span>{" "}
-    <span className="cinematic-text delay-400">Camera.</span>{" "}
-    <span className="cinematic-text delay-800">Draft.</span>
-  </p>
+ {/* Lights Camera Draft */}
+<p className={`text-4xl md:text-6xl mb-10 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+  <span className="cinematic-text">Lights.</span>{" "}
+  <span className="cinematic-text delay-400">Camera.</span>{" "}
+  <span className="cinematic-text delay-800">Draft.</span>
+</p>
 
 {/* ===== FILM STRIP HOW IT WORKS ===== */}
 
-<section className="w-full mt-8 mb-32 overflow-hidden">
+<section className="w-full mt-2 mb-24 overflow-hidden">
 
-<h2 className={`text-5xl mb-20 text-center tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+<h2 className={`text-5xl mb-10 text-center tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
 </h2>
+
 <div className="film-wrapper">
 
 <div className="film-track">
@@ -170,14 +171,14 @@ you score championship FlicksPoints.
 </div>
 
 </section>
-      
-  {/* Main CTA */}
-  <a
-    href="/join"
-    className={`bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] ${oswald.className}`}
-  >
-    Join The Waitlist
-  </a>
+
+{/* Main CTA */}
+<a
+  href="/join"
+  className={`mt-12 bg-white text-black px-14 py-5 rounded-full text-2xl tracking-widest hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] ${oswald.className}`}
+>
+  Join The Waitlist
+</a>
 
 </main>
     </>
