@@ -236,6 +236,65 @@ body {
   0% {
     transform: translateY(0px) scale(1);
   }
+
+  /* FILM CONTAINER */
+
+.film-container {
+  overflow-x: auto;
+  padding: 40px 0;
+}
+
+/* FILM STRIP */
+
+.film-strip {
+  display: flex;
+  gap: 80px;
+  padding: 0 60px;
+  position: relative;
+}
+
+/* FILM FRAME */
+
+.film-frame {
+  min-width: 340px;
+  max-width: 340px;
+  padding: 32px;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.film-frame:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(0,255,255,0.35);
+}
+
+/* ACT LABEL */
+
+.act {
+  color: #22d3ee;
+  font-size: 20px;
+  letter-spacing: 6px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* TITLE */
+
+.frame-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+/* DESCRIPTION */
+
+.film-frame p {
+  font-size: 18px;
+  color: #d1d5db;
+  line-height: 1.6;
+}
   100% {
     transform: translateY(40px) scale(1.15);
   }
