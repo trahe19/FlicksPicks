@@ -1,3 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+ background:#000;
+}
+
+/* Cinematic fade-up animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Stagger delays */
+
+.delay-150 { animation-delay: 0.15s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+
+/* Logo zoom */
+
+@keyframes logoZoom {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+.animate-logoZoom {
+  animation: logoZoom 4s ease-out forwards;
+}
+
+/* Curtain opening */
+
+.curtain-left,
+.curtain-right {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: black;
+  z-index: 50;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.curtain-left {
+  left: 0;
+  animation-name: openLeft;
+}
+
+.curtain-right {
+  right: 0;
+  animation-name: openRight;
+}
+
+@keyframes openLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes openRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+/* Cinematic headline */
+
+.cinematic-text {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: cinematicFade 0.8s ease-out forwards;
+  animation-delay: 2.2s;
+}
+
+.delay-400 { animation-delay: 2.6s; }
+.delay-800 { animation-delay: 3s; }
+
+@keyframes cinematicFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Film flash */
+
+.film-flash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 40;
+  animation: filmFlash 0.5s ease-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes filmFlash {
+  0% { opacity: 0; }
+  30% { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+
+/* Neon text */
+
+.neon-text {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #00f0ff,
+    0 0 10px #00f0ff,
+    0 0 20px #00f0ff,
+    0 0 40px #0088ff;
+}
+
+/* Moving lights */
+
+.background-light {
+  position: fixed;
+  top: -30%;
+  width: 250px;
+  height: 120vh;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.9;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,255,255,0.9) 0%,
+    rgba(0,255,255,0.6) 30%,
+    rgba(0,255,255,0.2) 60%,
+    transparent 100%
+  );
+
+  filter: blur(40px);
+}
+
+.light-left {
+  left: 8%;
+  transform-origin: top center;
+  animation: sweepLeft 8s ease-in-out infinite alternate;
+}
+
+.light-right {
+  right: 8%;
+  transform-origin: top center;
+  animation: sweepRight 8s ease-in-out infinite alternate;
+}
+
+@keyframes sweepLeft {
+  from { transform: rotate(-40deg); }
+  to { transform: rotate(30deg); }
+}
+
+@keyframes sweepRight {
+  from { transform: rotate(40deg); }
+  to { transform: rotate(-30deg); }
+}
+
 /* ============================= */
 /* FILM STRIP */
 /* ============================= */
@@ -5,11 +183,8 @@
 .film-wrapper{
   position:relative;
   overflow:hidden;
-  width:100vw;
-  margin-left:calc(50% - 50vw);
+  width:100%;
 }
-
-/* FILM STRIP TRACK */
 
 .film-track{
 
@@ -26,17 +201,20 @@
 
   width:max-content;
 
+  left:50%;
+  transform:translateX(-50%);
+
   animation:filmScroll 40s linear infinite;
 
 }
 
-/* PAUSE ON HOVER */
+/* Pause on hover */
 
 .film-wrapper:hover .film-track{
   animation-play-state: paused;
 }
 
-/* SPROCKET HOLES */
+/* Sprocket holes */
 
 .film-track::before,
 .film-track::after{
@@ -59,10 +237,6 @@
     white 34px
   );
 
-  box-shadow:
-    inset 0 2px 4px rgba(0,0,0,0.6),
-    inset 0 -2px 4px rgba(0,0,0,0.6);
-
 }
 
 .film-track::before{
@@ -73,7 +247,7 @@
   bottom:10px;
 }
 
-/* FILM FRAMES */
+/* Film cards */
 
 .film-frame{
 
@@ -89,10 +263,6 @@
   border-left:14px solid black;
   border-right:14px solid black;
 
-  box-shadow:
-    0 0 20px rgba(0,0,0,0.4),
-    inset 0 0 20px rgba(0,0,0,0.15);
-
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -102,22 +272,16 @@
 
 }
 
-/* ACT LABEL */
-
 .act{
   font-size:20px;
   letter-spacing:10px;
   margin-bottom:16px;
 }
 
-/* TITLE */
-
 .film-frame h3{
   font-size:42px;
   margin-bottom:14px;
 }
-
-/* BODY */
 
 .film-frame p{
   font-size:18px;
@@ -125,7 +289,7 @@
   max-width:420px;
 }
 
-/* FILM GRAIN */
+/* Film grain */
 
 .grain{
   position:absolute;
@@ -140,7 +304,7 @@
   pointer-events:none;
 }
 
-/* SCROLL ANIMATION */
+/* Scroll animation */
 
 @keyframes filmScroll{
 
@@ -155,14 +319,13 @@
 }
 
 /* ============================= */
-/* MOBILE OPTIMIZATION */
+/* MOBILE */
 /* ============================= */
 
 @media (max-width:768px){
 
   .film-track{
     gap:14px;
-    padding:60px 0;
   }
 
   .film-frame{
