@@ -237,176 +237,110 @@ body {
     transform: translateY(0px) scale(1);
   }
 
-  /* FILM CONTAINER */
-
-.film-container {
-  overflow-x: auto;
-  padding: 40px 0;
-}
-
-/* FILM STRIP */
-
-.film-strip {
-  display: flex;
-  gap: 80px;
-  padding: 0 60px;
-  position: relative;
-}
-
-/* FILM FRAME */
-
-.film-frame {
-  min-width: 340px;
-  max-width: 340px;
-  padding: 32px;
-  border: 2px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-}
-
-.film-frame:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 40px rgba(0,255,255,0.35);
-}
-
-/* ACT LABEL */
-
-.act {
-  color: #22d3ee;
-  font-size: 20px;
-  letter-spacing: 6px;
-  margin-bottom: 12px;
-  font-weight: bold;
-}
-
-/* TITLE */
-
-.frame-title {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
-/* DESCRIPTION */
-
-.film-frame p {
-  font-size: 18px;
-  color: #d1d5db;
-  line-height: 1.6;
-}
-  100% {
-    transform: translateY(40px) scale(1.15);
-  }
-}
-.film-strip::before,
-.film-strip::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background:
-  repeating-linear-gradient(
-    to right,
-    transparent 0px,
-    transparent 30px,
-    black 30px,
-    black 40px
-  );
-}
-
-.film-strip::before {
-  top: -20px;
-}
-
-/* FILM STRIP WRAPPER */
+  /* ===== FILM STRIP WRAPPER ===== */
 
 .film-wrapper{
-overflow-x:auto;
-padding:40px 0;
+overflow:hidden;
+position:relative;
+padding:60px 0;
 }
 
-/* FILM TRACK */
+/* ===== MOVING FILM STRIP ===== */
 
 .film-track{
 display:flex;
-gap:80px;
-padding:40px 80px;
-position:relative;
+gap:100px;
+padding:60px 100px;
+width:max-content;
+animation:filmScroll 25s linear infinite;
 }
 
-/* FILM STRIP HOLES */
+/* STOP SCROLL ON HOVER */
 
-.film-track::before,
-.film-track::after{
+.film-wrapper:hover .film-track{
+animation-play-state:paused;
+}
+
+/* ===== FILM FRAMES ===== */
+
+.film-frame{
+width:360px;
+padding:36px;
+border:3px solid rgba(255,255,255,0.15);
+background:rgba(0,0,0,0.55);
+border-radius:4px;
+position:relative;
+transition:all .35s ease;
+}
+
+.film-frame:hover{
+transform:translateY(-8px);
+box-shadow:0 0 45px rgba(0,255,255,0.35);
+}
+
+/* ===== FILM SPROCKET HOLES ===== */
+
+.film-wrapper::before,
+.film-wrapper::after{
 content:"";
 position:absolute;
 left:0;
 right:0;
-height:22px;
+height:24px;
 
 background:
 repeating-linear-gradient(
 to right,
-transparent 0px,
-transparent 30px,
-black 30px,
-black 40px
+black 0px,
+black 18px,
+transparent 18px,
+transparent 42px
 );
 }
 
-.film-track::before{
+.film-wrapper::before{
 top:0;
 }
 
-.film-track::after{
+.film-wrapper::after{
 bottom:0;
 }
 
-/* FILM CARD */
-
-.film-card{
-min-width:340px;
-max-width:340px;
-padding:36px;
-border:2px solid rgba(255,255,255,0.15);
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-border-radius:8px;
-transition:all .35s ease;
-}
-
-.film-card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 40px rgba(0,255,255,0.35);
-}
-
-/* ACT LABEL */
+/* ===== ACT LABEL ===== */
 
 .act{
 color:#22d3ee;
+font-size:20px;
 letter-spacing:6px;
 font-weight:bold;
-font-size:18px;
 margin-bottom:12px;
 }
 
-/* TITLE */
+/* ===== FRAME TITLE ===== */
 
-.film-card h3{
-font-size:30px;
-margin-bottom:16px;
+.film-frame h3{
+font-size:28px;
+margin-bottom:14px;
 }
 
-/* DESCRIPTION */
+/* ===== FRAME TEXT ===== */
 
-.film-card p{
+.film-frame p{
 font-size:18px;
 line-height:1.6;
 color:#d1d5db;
 }
 
-.film-strip::after {
-  bottom: -20px;
+/* ===== AUTO SCROLL ANIMATION ===== */
+
+@keyframes filmScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
 }
