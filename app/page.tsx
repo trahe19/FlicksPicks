@@ -77,19 +77,16 @@ export default function HomePage() {
   <span className="cinematic-text delay-800">Draft.</span>
 </p>
 
-{/* ===== FILM STRIP HOW IT WORKS ===== */}
+      {/* ===== FILM STRIP HOW IT WORKS ===== */}
 
-<section className="relative w-full mt-8 mb-24 pt-16 pb-20">
+<section className="w-full mt-12 mb-0 bg-black pt-20 pb-28">
 
-<div className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-[200vh] bg-black"></div>
-
-<div className="relative z-10">
-
-<h2 className={`text-4xl md:text-6xl mb-10 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+<h2 className={`text-4xl md:text-6xl mb-14 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
 </h2>
 
 <div className="film-wrapper">
+
 <div className="film-track">
 
 {/* ACT I */}
@@ -105,7 +102,7 @@ Balance box-office blockbusters with Oscar contenders.
 {/* ACT II */}
 <div className="film-frame">
 <div className="act">ACT II</div>
-<h3 className={playfair.className}>Draft</h3>
+<h3 className={playfair.className}>Movies Hit Theaters</h3>
 <p>
 Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
 Actors and directors earn FlicksPoints from the movies they’re part of.
@@ -115,20 +112,20 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 {/* ACT III */}
 <div className="film-frame">
 <div className="act">ACT III</div>
-<h3 className={playfair.className}>Draft</h3>
+<h3 className={playfair.className}>Win Monthly Matchups</h3>
 <p>
-Every month your starters face another team head-to-head.
-Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
+Every month your starters face another team head-to-head. Manage your roster,
+make waiver-wire pickups, and stack up wins to make the championship.
 </p>
 </div>
 
 {/* ACT IV */}
 <div className="film-frame">
 <div className="act">ACT IV</div>
-<h3 className={playfair.className}>Draft</h3>
+<h3 className={playfair.className}>The Academy Cup</h3>
 <p>
-The season culminates on Oscar night. If your movies, actors, or directors win Academy Awards,
-you score championship FlicksPoints.
+The season culminates on Oscar night. If your movies, actors, or directors win
+Academy Awards, you score championship FlicksPoints.
 </p>
 </div>
 
@@ -136,7 +133,7 @@ you score championship FlicksPoints.
 
 <div className="film-frame">
 <div className="act">ACT I</div>
-<h3>Draft</h3>
+<h3 className={playfair.className}>Draft</h3>
 <p>
 Build a roster of upcoming movies, actors, and directors releasing this year.
 Balance box-office blockbusters with Oscar contenders.
@@ -145,7 +142,7 @@ Balance box-office blockbusters with Oscar contenders.
 
 <div className="film-frame">
 <div className="act">ACT II</div>
-<h3>Movies Hit Theaters</h3>
+<h3 className={playfair.className}>Movies Hit Theaters</h3>
 <p>
 Films score FlicksPoints from box-office profit, critic ratings, and audience reception.
 Actors and directors earn FlicksPoints from the movies they’re part of.
@@ -154,26 +151,27 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 
 <div className="film-frame">
 <div className="act">ACT III</div>
-<h3>Win Monthly Matchups</h3>
+<h3 className={playfair.className}>Win Monthly Matchups</h3>
 <p>
-Every month your starters face another team head-to-head.
-Manage your roster, make waiver-wire pickups, and stack up wins to make the championship.
+Every month your starters face another team head-to-head. Manage your roster,
+make waiver-wire pickups, and stack up wins to make the championship.
 </p>
 </div>
 
 <div className="film-frame">
 <div className="act">ACT IV</div>
-<h3>The Academy Cup</h3>
+<h3 className={playfair.className}>The Academy Cup</h3>
 <p>
-The season culminates on Oscar night. If your movies, actors, or directors win Academy Awards,
-you score championship FlicksPoints.
+The season culminates on Oscar night. If your movies, actors, or directors win
+Academy Awards, you score championship FlicksPoints.
 </p>
 </div>
 
 </div>
 </div>
-</div>
+
 </section>
+
 
 {/* Main CTA */}
 <a
