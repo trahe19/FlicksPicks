@@ -249,7 +249,7 @@ body {
 }
 
 /* ============================= */
-/* FILM STRIP */
+/* VINTAGE FILM STRIP */
 /* ============================= */
 
 .film-wrapper{
@@ -284,7 +284,7 @@ body {
 }
 
 
-/* SPROCKET HOLES (ROUNDED RECTANGLES) */
+/* SPROCKET HOLES (ROUNDED FILM PERFORATIONS) */
 
 .film-track::before,
 .film-track::after{
@@ -299,17 +299,12 @@ body {
   height:18px;
 
   background:
-  repeating-linear-gradient(
-    to right,
-    transparent 0px,
-    transparent 20px,
-    white 20px,
-    white 34px,
-    transparent 34px,
-    transparent 54px
-  );
+  radial-gradient(circle at center,
+  transparent 6px,
+  white 7px);
 
-  border-radius:6px;
+  background-size:38px 18px;
+  background-repeat:repeat-x;
 
 }
 
@@ -325,19 +320,23 @@ body {
 /* FILM FRAMES */
 
 .film-frame{
-  box-shadow:0 15px 50px rgba(0,0,0,.35);
+
   width:720px;
 
   height:360px;
 
-  padding:50px 70px;
+  padding:55px 70px;
 
-  background:white;
+  background:linear-gradient(
+    to bottom,
+    #f4f1e6,
+    #ebe4d2
+  );
 
-  color:black;
+  color:#111;
 
-  border-left:14px solid black;
-  border-right:14px solid black;
+  border-left:14px solid #000;
+  border-right:14px solid #000;
 
   display:flex;
   flex-direction:column;
@@ -350,6 +349,10 @@ body {
 
   box-sizing:border-box;
 
+  box-shadow:
+  inset 0 0 40px rgba(0,0,0,.12),
+  0 20px 60px rgba(0,0,0,.35);
+
 }
 
 
@@ -361,13 +364,13 @@ body {
 
   font-size:22px;
 
-  letter-spacing:10px;
+  letter-spacing:12px;
 
-  margin-bottom:18px;
+  margin-bottom:20px;
 
   font-weight:700;
 
-  opacity:.7;
+  color:#555;
 
 }
 
@@ -378,13 +381,13 @@ body {
 
   font-family:"Bebas Neue", sans-serif;
 
-  font-size:48px;
+  font-size:54px;
 
-  letter-spacing:1px;
+  letter-spacing:2px;
 
-  margin-bottom:16px;
+  margin-bottom:18px;
 
-  line-height:1.1;
+  line-height:1.05;
 
 }
 
@@ -397,9 +400,9 @@ body {
 
   font-size:22px;
 
-  line-height:1.6;
+  line-height:1.65;
 
-  max-width:600px;
+  max-width:620px;
 
 }
 
