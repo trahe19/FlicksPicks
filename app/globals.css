@@ -155,8 +155,8 @@ body {
 .background-light {
   position: fixed;
   top: -30%;
-  width: 250px;                 /* thinner */
-  height: 220%;
+  width: 250px;
+  height: 120vh;
   pointer-events: none;
   z-index: 5;
   opacity: 0.9;
@@ -257,7 +257,7 @@ body {
 
   gap:22px;
 
-  padding:120px 200px;
+  padding:60px 160px;
 
   background:#000;
 
@@ -267,7 +267,7 @@ body {
 
   height:300px;
 
-  animation:filmScroll 38s linear infinite;
+animation:filmScroll 38s linear infinite, filmJitter .4s infinite;
 }
 
 /* SPROCKET HOLES */
@@ -279,8 +279,8 @@ body {
 
   position:absolute;
 
-  left:180px;
-  right:180px;
+  left:0;
+  right:0;
 
   height:22px;
 
@@ -292,7 +292,7 @@ body {
     white 24px,
     white 42px
   );
-
+  
 }
 
 .film-track::before{
@@ -392,16 +392,12 @@ body {
 }
 /* PROJECTOR JITTER */
 
-.film-wrapper{
-  animation:filmJitter 0.35s infinite;
-}
-
 @keyframes filmJitter{
 
-  0% { transform:translateY(0px); }
+  0% { transform: translateX(0) translateY(0px); }
 
-  50% { transform:translateY(1px); }
+  50% { transform: translateX(0) translateY(1px); }
 
-  100% { transform:translateY(0px); }
+  100% { transform: translateX(0) translateY(0px); }
 
 }
