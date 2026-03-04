@@ -264,7 +264,8 @@ body {
 .film-track{
 
   display:flex;
-  align-items:stretch;
+
+  align-items:center;   /* centers cards vertically */
 
   gap:28px;
 
