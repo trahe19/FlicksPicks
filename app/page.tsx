@@ -77,17 +77,18 @@ export default function HomePage() {
   <span className="cinematic-text delay-800">Draft.</span>
 </p>
 
-      {/* ===== FILM STRIP HOW IT WORKS ===== */}
+   {/* ===== FILM STRIP HOW IT WORKS ===== */}
 
-<section className="w-full mt-12 mb-0 bg-black pt-20 pb-28">
+<section className="w-full mt-16 mb-24 overflow-hidden">
 
-<h2 className={`text-4xl md:text-6xl mb-14 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
+<h2 className={`text-4xl md:text-6xl mb-12 tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
 </h2>
 
 <div className="film-wrapper">
-<div className="reel-left"></div>
-<div className="reel-right"></div>
+
+<div className="grain"></div>
+
 <div className="film-track">
 
 {/* ACT I */}
@@ -115,8 +116,8 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 <div className="act">ACT III</div>
 <h3 className={playfair.className}>Win Monthly Matchups</h3>
 <p>
-Every month your starters face another team head-to-head. Manage your roster,
-make waiver-wire pickups, and stack up wins to make the championship.
+Every month your starters face another team head-to-head.
+Manage your roster, make waiver-wire pickups, and stack up wins.
 </p>
 </div>
 
@@ -125,13 +126,14 @@ make waiver-wire pickups, and stack up wins to make the championship.
 <div className="act">ACT IV</div>
 <h3 className={playfair.className}>The Academy Cup</h3>
 <p>
-The season culminates on Oscar night. If your movies, actors, or directors win
-Academy Awards, you score championship FlicksPoints.
+The season culminates on Oscar night. If your movies, actors, or directors
+win Academy Awards, you score championship FlicksPoints.
 </p>
 </div>
 
 {/* DUPLICATE FOR LOOP */}
 
+{/* ACT I */}
 <div className="film-frame">
 <div className="act">ACT I</div>
 <h3 className={playfair.className}>Draft</h3>
@@ -141,6 +143,7 @@ Balance box-office blockbusters with Oscar contenders.
 </p>
 </div>
 
+{/* ACT II */}
 <div className="film-frame">
 <div className="act">ACT II</div>
 <h3 className={playfair.className}>Movies Hit Theaters</h3>
@@ -150,21 +153,23 @@ Actors and directors earn FlicksPoints from the movies they’re part of.
 </p>
 </div>
 
+{/* ACT III */}
 <div className="film-frame">
 <div className="act">ACT III</div>
 <h3 className={playfair.className}>Win Monthly Matchups</h3>
 <p>
-Every month your starters face another team head-to-head. Manage your roster,
-make waiver-wire pickups, and stack up wins to make the championship.
+Every month your starters face another team head-to-head.
+Manage your roster, make waiver-wire pickups, and stack up wins.
 </p>
 </div>
 
+{/* ACT IV */}
 <div className="film-frame">
 <div className="act">ACT IV</div>
 <h3 className={playfair.className}>The Academy Cup</h3>
 <p>
-The season culminates on Oscar night. If your movies, actors, or directors win
-Academy Awards, you score championship FlicksPoints.
+The season culminates on Oscar night. If your movies, actors, or directors
+win Academy Awards, you score championship FlicksPoints.
 </p>
 </div>
 
@@ -172,7 +177,6 @@ Academy Awards, you score championship FlicksPoints.
 </div>
 
 </section>
-
 
 {/* Main CTA */}
 <a
