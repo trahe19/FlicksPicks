@@ -79,7 +79,7 @@ export default function HomePage() {
 <section className="relative w-full max-w-6xl mb-32 px-6">
 
   <h2 className={`text-4xl md:text-5xl mb-20 tracking-[0.35em] uppercase neon-text ${orbitron.className}`}>
-    The Game in 4 Acts
+    How it Works
   </h2>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
