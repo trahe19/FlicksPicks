@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Orbitron, Oswald } from "next/font/google";
 import { Orbitron, Oswald, Bebas_Neue } from "next/font/google";
 
 const bebas = Bebas_Neue({
