@@ -274,9 +274,7 @@ body {
 
   width:max-content;
 
-  animation:filmScroll 45s linear infinite,
-             filmWobble 6s ease-in-out infinite;
-
+  animation:filmScroll 45s linear infinite;
 }
 
 /* PAUSE ON HOVER */
@@ -304,8 +302,8 @@ body {
     to right,
     transparent 0px,
     transparent 18px,
-    #ffffff 18px,
-    #ffffff 34px
+    white 18px,
+    white 34px
   );
 
   box-shadow:
@@ -403,25 +401,6 @@ body {
 
 }
 
-/* PROJECTOR WOBBLE */
-
-@keyframes filmWobble{
-
-  0%{
-    transform:translateY(0px) rotate(0deg);
-  }
-
-  50%{
-    transform:translateY(-1px) rotate(0.05deg);
-  }
-
-  100%{
-    transform:translateY(0px) rotate(0deg);
-  }
-
-}
-
-
 /* ============================= */
 /* MOBILE OPTIMIZATION */
 /* ============================= */
@@ -429,23 +408,24 @@ body {
 @media (max-width:768px){
 
   .film-track{
-    gap:12px;
-    padding:60px 12px;
+    gap:10px;
+    padding:60px 0px; /* removes side cutoff */
   }
 
   .film-frame{
 
-    width:90vw;
-    max-width:420px;
+    width:100vw; /* FULL SCREEN WIDTH */
+
+    max-width:none;
 
     height:auto;
 
-    padding:35px 28px;
+    padding:34px 26px;
 
   }
 
   .film-frame h3{
-    font-size:32px;
+    font-size:30px;
   }
 
   .film-frame p{
@@ -453,7 +433,7 @@ body {
   }
 
   .act{
-    font-size:16px;
+    font-size:15px;
     letter-spacing:6px;
   }
 
