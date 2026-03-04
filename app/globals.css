@@ -320,6 +320,93 @@ body {
   top: -20px;
 }
 
+/* FILM STRIP WRAPPER */
+
+.film-wrapper{
+overflow-x:auto;
+padding:40px 0;
+}
+
+/* FILM TRACK */
+
+.film-track{
+display:flex;
+gap:80px;
+padding:40px 80px;
+position:relative;
+}
+
+/* FILM STRIP HOLES */
+
+.film-track::before,
+.film-track::after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+height:22px;
+
+background:
+repeating-linear-gradient(
+to right,
+transparent 0px,
+transparent 30px,
+black 30px,
+black 40px
+);
+}
+
+.film-track::before{
+top:0;
+}
+
+.film-track::after{
+bottom:0;
+}
+
+/* FILM CARD */
+
+.film-card{
+min-width:340px;
+max-width:340px;
+padding:36px;
+border:2px solid rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:8px;
+transition:all .35s ease;
+}
+
+.film-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 40px rgba(0,255,255,0.35);
+}
+
+/* ACT LABEL */
+
+.act{
+color:#22d3ee;
+letter-spacing:6px;
+font-weight:bold;
+font-size:18px;
+margin-bottom:12px;
+}
+
+/* TITLE */
+
+.film-card h3{
+font-size:30px;
+margin-bottom:16px;
+}
+
+/* DESCRIPTION */
+
+.film-card p{
+font-size:18px;
+line-height:1.6;
+color:#d1d5db;
+}
+
 .film-strip::after {
   bottom: -20px;
 }
