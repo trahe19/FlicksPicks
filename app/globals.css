@@ -265,7 +265,7 @@ body {
 
   width:max-content;
 
-  height:420px;
+  height:300px;
 
   animation:filmScroll 38s linear infinite;
 }
@@ -279,18 +279,18 @@ body {
 
   position:absolute;
 
-  left:120px;
-  right:120px;
+  left:200px;
+  right:200px;
 
-  height:28px;
+  height:22px;
 
   background:
   repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 26px,
-    white 26px,
-    white 46px
+    transparent 24px,
+    white 24px,
+    white 40px
   );
 
 }
@@ -309,7 +309,7 @@ body {
 
   width:520px;
 
-  height:240px;
+  height:200px;
 
   padding:40px 60px;
 
@@ -390,20 +390,18 @@ body {
   }
 
 }
-/* ===== PROJECTOR FILM JITTER ===== */
+/* PROJECTOR JITTER */
+
+.film-wrapper{
+  animation:filmJitter 0.35s infinite;
+}
 
 @keyframes filmJitter{
 
-  0%{
-    transform: translateY(0);
-  }
+  0% { transform:translateY(0px); }
 
-  50%{
-    transform: translateY(1px);
-  }
+  50% { transform:translateY(1px); }
 
-  100%{
-    transform: translateY(0);
-  }
+  100% { transform:translateY(0px); }
 
 }
