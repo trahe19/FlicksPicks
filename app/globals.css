@@ -249,25 +249,26 @@ body {
 }
 
 /* ============================= */
-/* CINEMATIC FILM STRIP */
+/* FILM STRIP */
 /* ============================= */
 
 .film-wrapper{
   overflow:hidden;
   width:100%;
-  padding:60px 0 80px 0;
+  padding:50px 0 60px 0;
 }
 
-/* FILM STRIP */
+
+/* MAIN FILM STRIP */
 
 .film-track{
 
   display:flex;
-  align-items:center;
+  align-items:stretch;
 
-  gap:32px;
+  gap:24px;
 
-  padding:140px 240px;
+  padding:80px 180px;
 
   background:#000;
 
@@ -275,9 +276,9 @@ body {
 
   width:max-content;
 
-  height:420px;
+  height:360px;
 
-  animation:filmScroll 38s linear infinite;
+  animation:filmScroll 40s linear infinite;
 }
 
 
@@ -290,18 +291,18 @@ body {
 
   position:absolute;
 
-  left:220px;
-  right:220px;
+  left:160px;
+  right:160px;
 
-  height:26px;
+  height:18px;
 
   background:
   repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 28px,
-    white 28px,
-    white 48px
+    transparent 24px,
+    white 24px,
+    white 42px
   );
 
 }
@@ -319,38 +320,29 @@ body {
 
 .film-frame{
 
-  width:560px;
+  width:640px;
 
-  height:260px;
+  height:220px;
 
-  padding:50px 70px;
+  padding:32px 48px;
 
   background:white;
 
   color:black;
 
-  border-left:16px solid black;
-  border-right:16px solid black;
+  border-left:14px solid black;
+  border-right:14px solid black;
 
   display:flex;
   flex-direction:column;
-  justify-content:center;
+
+  justify-content:flex-start;
+
   align-items:center;
 
   text-align:center;
 
-  transition:all .25s ease;
-
-}
-
-
-/* FRAME HOVER */
-
-.film-frame:hover{
-
-  transform:translateY(-10px) scale(1.04);
-
-  box-shadow:0 0 80px rgba(0,255,255,0.45);
+  box-sizing:border-box;
 
 }
 
@@ -359,30 +351,26 @@ body {
 
 .act{
 
-  font-size:22px;
+  font-size:18px;
 
-  letter-spacing:10px;
+  letter-spacing:8px;
 
-  margin-bottom:14px;
+  margin-bottom:12px;
 
-  font-weight:700;
-
-  opacity:.7;
+  font-weight:600;
 
 }
 
 
-/* CARD TITLES */
+/* CARD TITLE */
 
 .film-frame h3{
 
-  font-size:42px;
+  font-size:30px;
 
-  margin-bottom:16px;
+  margin-bottom:12px;
 
-  font-weight:700;
-
-  letter-spacing:.5px;
+  line-height:1.2;
 
 }
 
@@ -391,11 +379,11 @@ body {
 
 .film-frame p{
 
-  font-size:20px;
+  font-size:18px;
 
-  line-height:1.6;
+  line-height:1.45;
 
-  max-width:420px;
+  max-width:520px;
 
 }
 
@@ -411,22 +399,5 @@ body {
   100%{
     transform:translateX(-50%);
   }
-
-}
-
-
-/* PROJECTOR JITTER */
-
-.film-wrapper{
-  animation:filmJitter 0.35s infinite;
-}
-
-@keyframes filmJitter{
-
-  0% { transform:translateY(0px); }
-
-  50% { transform:translateY(1px); }
-
-  100% { transform:translateY(0px); }
 
 }
