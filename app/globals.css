@@ -422,8 +422,8 @@ body {
 
   .film-frame{
 
-    width:92vw;
-    min-width:92vw;
+    width:100vw;
+    min-width:100vw;
     max-width:none;
 
     height:auto;
