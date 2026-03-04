@@ -1,253 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-/* Cinematic fade-up animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeUp {
-  animation: fadeUp 1s ease-out forwards;
-  opacity: 0;
-}
-body {
- background:#000;
-}
-/* Stagger delays */
-.delay-150 { animation-delay: 0.15s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-500 { animation-delay: 0.5s; }
-.delay-700 { animation-delay: 0.7s; }
-
-
-/* Slow cinematic logo zoom */
-@keyframes logoZoom {
-  from {
-    transform: scale(0.95);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-.animate-logoZoom {
-  animation: logoZoom 4s ease-out forwards;
-}
-/* Curtain opening effect */
-.curtain-left,
-.curtain-right {
-  position: fixed;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: black;
-  z-index: 50;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-.curtain-left {
-  left: 0;
-  animation-name: openLeft;
-}
-
-.curtain-right {
-  right: 0;
-  animation-name: openRight;
-}
-
-@keyframes openLeft {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-
-@keyframes openRight {
-  from { transform: translateX(0); }
-  to { transform: translateX(100%); }
-}
-/* Fixed cinematic spotlight sweep */
-.spotlight-sweep {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at 20% 50%,
-    rgba(255, 255, 255, 0.07),
-    transparent 60%
-  );
-  background-size: 200% 200%;
-  animation: spotlightMove 18s ease-in-out infinite alternate;
-}
-
-@keyframes spotlightMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-/* Cinematic staggered text reveal AFTER curtains */
-.cinematic-text {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: cinematicFade 0.8s ease-out forwards;
-  animation-delay: 2.2s; /* waits until curtains finish */
-}
-
-.delay-400 { animation-delay: 2.6s; }
-.delay-800 { animation-delay: 3s; }
-
-@keyframes cinematicFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Film burn flash (delayed until curtains finish) */
-.film-flash {
-  position: fixed;
-  inset: 0;
-  background: white;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 40;
-  animation: filmFlash 0.5s ease-out forwards;
-  animation-delay: 2s; /* waits for curtains to open */
-}
-
-@keyframes filmFlash {
-  0% { opacity: 0; }
-  30% { opacity: 0.7; }
-  100% { opacity: 0; }
-}
-/* Neon headline effect */
-.neon-text {
-  color: #ffffff;
-  text-shadow:
-    0 0 5px #00f0ff,
-    0 0 10px #00f0ff,
-    0 0 20px #00f0ff,
-    0 0 40px #0088ff;
-}
-
-
-
-/* ===== MOVING LIGHT SWEEPS ===== */
-
-/* ===== MOVING LIGHT SWEEPS (REFINED) ===== */
-
-.background-light {
-  position: fixed;
-  top: -30%;
-  width: 250px;
-  height: 120vh;
-  pointer-events: none;
-  z-index: 5;
-  opacity: 0.9;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(0,255,255,0.9) 0%,
-    rgba(0,255,255,0.6) 30%,
-    rgba(0,255,255,0.2) 60%,
-    transparent 100%
-  );
-
-  filter: blur(40px);           /* tighter glow */
-}
-
-.light-left {
-  left: 8%;
-  transform-origin: top center;
-  animation: sweepLeft 8s ease-in-out infinite alternate;
-}
-
-.light-right {
-  right: 8%;
-  transform-origin: top center;
-  animation: sweepRight 8s ease-in-out infinite alternate;
-}
-
-@keyframes sweepLeft {
-  from { transform: rotate(-40deg); }
-  to   { transform: rotate(30deg); }
-}
-
-@keyframes sweepRight {
-  from { transform: rotate(40deg); }
-  to   { transform: rotate(-30deg); }
-}
-
-/* ===== Procedural Stage Fog ===== */
-
-.background-smoke {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 4;
-
-  background:
-    radial-gradient(circle at 20% 40%, rgba(255,255,255,0.06), transparent 60%),
-    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05), transparent 65%),
-    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.04), transparent 70%);
-
-  animation: fogShift 25s ease-in-out infinite alternate;
-}
-
-.background-smoke::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at 40% 30%, rgba(255,255,255,0.05), transparent 60%),
-    radial-gradient(circle at 60% 70%, rgba(255,255,255,0.05), transparent 65%);
-
-  animation: fogShiftReverse 35s ease-in-out infinite alternate;
-}
-@keyframes fogShift {
-  0% {
-    transform: translateY(0px) scale(1);
-  }
-  100% {
-    transform: translateY(-60px) scale(1.1);
-  }
-}
-.background-smoke::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at 40% 30%, rgba(255,255,255,0.05), transparent 60%),
-    radial-gradient(circle at 60% 70%, rgba(255,255,255,0.05), transparent 65%);
-
-  animation: fogShiftReverse 35s ease-in-out infinite alternate;
-  mix-blend-mode: screen;
-}
-
-@keyframes fogShiftReverse {
-  0% {
-    transform: translateY(0px) scale(1);
-  }
-}
-
 /* ============================= */
 /* FILM STRIP */
 /* ============================= */
@@ -255,7 +5,8 @@ body {
 .film-wrapper{
   position:relative;
   overflow:hidden;
-  width:100%;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
 }
 
 /* FILM STRIP TRACK */
@@ -274,8 +25,6 @@ body {
   position:relative;
 
   width:max-content;
-
-  transform:translateX(-25%);
 
   animation:filmScroll 40s linear infinite;
 
@@ -391,16 +140,16 @@ body {
   pointer-events:none;
 }
 
-/* SCROLL */
+/* SCROLL ANIMATION */
 
 @keyframes filmScroll{
 
   0%{
-    transform:translateX(-25%);
+    transform:translateX(-30%);
   }
 
   100%{
-    transform:translateX(-75%);
+    transform:translateX(-80%);
   }
 
 }
@@ -409,26 +158,21 @@ body {
 /* MOBILE OPTIMIZATION */
 /* ============================= */
 
-/* ============================= */
-/* MOBILE OPTIMIZATION */
-/* ============================= */
-
 @media (max-width:768px){
 
   .film-track{
-    gap:12px;
+    gap:14px;
     padding:60px 0;
   }
 
   .film-frame{
 
-    width:100vw;
-    min-width:100vw;
-    max-width:none;
+    width:95vw;
+    min-width:95vw;
 
     height:auto;
 
-    padding:34px 26px;
+    padding:34px 28px;
 
   }
 
