@@ -249,21 +249,25 @@ body {
 }
 
 /* ============================= */
-/* FILM STRIP SECTION */
+/* CINEMATIC FILM STRIP */
 /* ============================= */
 
 .film-wrapper{
-  width:100%;
   overflow:hidden;
-  padding:30px 0;
+  width:100%;
+  padding:60px 0 80px 0;
 }
 
+/* FILM STRIP */
+
 .film-track{
+
   display:flex;
   align-items:center;
-  gap:20px;
 
-  padding:40px 120px;
+  gap:32px;
+
+  padding:140px 240px;
 
   background:#000;
 
@@ -271,12 +275,13 @@ body {
 
   width:max-content;
 
-  height:260px;
+  height:420px;
 
-  animation:filmScroll 35s linear infinite;
+  animation:filmScroll 38s linear infinite;
 }
 
-/* sprocket holes */
+
+/* SPROCKET HOLES */
 
 .film-track::before,
 .film-track::after{
@@ -285,44 +290,47 @@ body {
 
   position:absolute;
 
-  left:0;
-  right:0;
+  left:220px;
+  right:220px;
 
-  height:18px;
+  height:26px;
 
-  background:repeating-linear-gradient(
+  background:
+  repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 22px,
-    white 22px,
-    white 38px
+    transparent 28px,
+    white 28px,
+    white 48px
   );
+
 }
 
 .film-track::before{
-  top:6px;
+  top:0;
 }
 
 .film-track::after{
-  bottom:6px;
+  bottom:0;
 }
 
-/* frames */
+
+/* FILM FRAMES */
 
 .film-frame{
 
-  width:520px;
+  width:560px;
 
-  height:170px;
+  height:260px;
 
-  padding:30px 50px;
+  padding:50px 70px;
 
   background:white;
 
   color:black;
 
-  border-left:12px solid black;
-  border-right:12px solid black;
+  border-left:16px solid black;
+  border-right:16px solid black;
 
   display:flex;
   flex-direction:column;
@@ -331,39 +339,94 @@ body {
 
   text-align:center;
 
-  transition:.25s;
+  transition:all .25s ease;
+
 }
+
+
+/* FRAME HOVER */
 
 .film-frame:hover{
-  transform:translateY(-4px);
-  box-shadow:0 0 40px rgba(0,255,255,.35);
+
+  transform:translateY(-10px) scale(1.04);
+
+  box-shadow:0 0 80px rgba(0,255,255,0.45);
+
 }
+
+
+/* ACT LABEL */
 
 .act{
-  font-size:18px;
-  letter-spacing:6px;
-  margin-bottom:8px;
-  font-weight:600;
+
+  font-size:22px;
+
+  letter-spacing:10px;
+
+  margin-bottom:14px;
+
+  font-weight:700;
+
+  opacity:.7;
+
 }
+
+
+/* CARD TITLES */
 
 .film-frame h3{
-  font-size:30px;
-  margin-bottom:8px;
+
+  font-size:42px;
+
+  margin-bottom:16px;
+
+  font-weight:700;
+
+  letter-spacing:.5px;
+
 }
+
+
+/* DESCRIPTION */
 
 .film-frame p{
-  font-size:17px;
-  line-height:1.4;
-  max-width:360px;
+
+  font-size:20px;
+
+  line-height:1.6;
+
+  max-width:420px;
+
 }
 
-/* scroll */
+
+/* FILM SCROLL */
 
 @keyframes filmScroll{
+
   0%{
     transform:translateX(0);
   }
+
   100%{
     transform:translateX(-50%);
   }
+
+}
+
+
+/* PROJECTOR JITTER */
+
+.film-wrapper{
+  animation:filmJitter 0.35s infinite;
+}
+
+@keyframes filmJitter{
+
+  0% { transform:translateY(0px); }
+
+  50% { transform:translateY(1px); }
+
+  100% { transform:translateY(0px); }
+
 }
