@@ -84,7 +84,6 @@ export default function HomePage() {
 <h2 className={`text-5xl mb-20 text-center tracking-[0.3em] uppercase neon-text ${orbitron.className}`}>
 How It Works
 </h2>
-<section className="relative bg-transparent border-none shadow-none">
 <div className="film-wrapper">
 
 <div className="film-track">
