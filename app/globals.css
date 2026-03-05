@@ -219,7 +219,9 @@ body {
   animation-play-state: paused;
 }
 
-/* Sprocket holes */
+/* ============================= */
+/* FILM PERFORATIONS */
+/* ============================= */
 
 .film-track::before,
 .film-track::after{
@@ -231,31 +233,37 @@ body {
   left:0;
   right:0;
 
-  height:24px;
+  height:26px;
 
   background:
   repeating-linear-gradient(
     to right,
     transparent 0px,
     transparent 18px,
-    white 18px,
-    white 34px
+    #ffffff 18px,
+    #ffffff 34px
   );
+
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,0.7),
+    inset 0 -2px 6px rgba(0,0,0,0.7);
 
 }
 
 .film-track::before{
-  top:10px;
+  top:8px;
 }
 
 .film-track::after{
-  bottom:10px;
+  bottom:8px;
 }
 
+/* ============================= */
 /* FILM EDGE RAILS */
+/* ============================= */
 
 .film-wrapper::before,
-.film-wrapper::after {
+.film-wrapper::after{
 
   content:"";
 
@@ -264,7 +272,7 @@ body {
   top:0;
   bottom:0;
 
-  width:70px;
+  width:80px;
 
   z-index:5;
 
@@ -277,8 +285,8 @@ body {
 
   background:linear-gradient(
     to right,
-    rgba(0,0,0,0.95),
-    rgba(0,0,0,0.6),
+    rgba(0,0,0,1),
+    rgba(0,0,0,0.8),
     rgba(0,0,0,0)
   );
 }
@@ -288,8 +296,8 @@ body {
 
   background:linear-gradient(
     to left,
-    rgba(0,0,0,0.95),
-    rgba(0,0,0,0.6),
+    rgba(0,0,0,1),
+    rgba(0,0,0,0.8),
     rgba(0,0,0,0)
   );
 }
@@ -351,14 +359,31 @@ body {
   pointer-events:none;
 }
 
-/* PROJECTOR VIGNETTE */
+/* ============================= */
+/* PROJECTOR LIGHT VIGNETTE */
+/* ============================= */
 
 .film-wrapper{
 
   box-shadow:
-    inset 0 0 160px rgba(0,0,0,0.75),
-    inset 0 0 90px rgba(0,0,0,0.6);
+    inset 0 0 180px rgba(0,0,0,0.75),
+    inset 0 0 120px rgba(0,0,0,0.55),
+    inset 0 0 60px rgba(0,0,0,0.4);
+}
+/* ============================= */
+/* PROJECTOR FLICKER */
+/* ============================= */
 
+@keyframes projectorFlicker{
+
+  0% { opacity:1 }
+  50% { opacity:0.985 }
+  100% { opacity:1 }
+
+}
+
+.film-wrapper{
+  animation:projectorFlicker 0.25s infinite;
 }
 
 /* Scroll animation */
