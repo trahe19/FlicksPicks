@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Orbitron, Oswald, Playfair_Display } from "next/font/google";
+import { useEffect } from "react";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -19,6 +20,25 @@ const oswald = Oswald({
 export default function HomePage() {
   return (
     <>
+      useEffect(() => {
+  const wrapper = document.querySelector(".film-wrapper");
+
+  if (!wrapper) return;
+
+  const start = () => wrapper.classList.add("touching");
+  const end = () => wrapper.classList.remove("touching");
+
+  wrapper.addEventListener("touchstart", start);
+  wrapper.addEventListener("touchend", end);
+  wrapper.addEventListener("touchcancel", end);
+
+  return () => {
+    wrapper.removeEventListener("touchstart", start);
+    wrapper.removeEventListener("touchend", end);
+    wrapper.removeEventListener("touchcancel", end);
+  };
+}, []);
+      
       {/* ===== FULL PAGE BACKGROUND LAYERS ===== */}
 {/* <div className="background-smoke" /> */}
  <div className="background-light light-left" /> 
