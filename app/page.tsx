@@ -170,7 +170,7 @@ window.addEventListener("mousemove", (e) => {
 
     <div className="film-wrapper">
 
-  <div className="projector-beam"></div>
+  <div className="projector-overlay"></div>
       
   <div className="vignette"></div>
 
