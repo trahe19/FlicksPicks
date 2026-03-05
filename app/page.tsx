@@ -86,12 +86,25 @@ useEffect(() => {
 
   const wrapper = document.querySelector(".film-wrapper");
 
-  wrapper?.addEventListener("touchstart", e => startDrag(e.touches[0].clientX));
-  wrapper?.addEventListener("touchmove", e => moveDrag(e.touches[0].clientX));
-  wrapper?.addEventListener("touchend", endDrag);
+wrapper?.addEventListener("touchstart", (e) => {
+  const touch = (e as TouchEvent).touches[0];
+  startDrag(touch.clientX);
+});
 
-  wrapper?.addEventListener("mousedown", e => startDrag(e.clientX));
-  window.addEventListener("mousemove", e => moveDrag(e.clientX));
+wrapper?.addEventListener("touchmove", (e) => {
+  const touch = (e as TouchEvent).touches[0];
+  moveDrag(touch.clientX);
+});
+
+wrapper?.addEventListener("touchend", endDrag);
+
+wrapper?.addEventListener("mousedown", (e) => {
+  startDrag((e as MouseEvent).clientX);
+});
+
+window.addEventListener("mousemove", (e) => {
+  moveDrag((e as MouseEvent).clientX);
+});
   window.addEventListener("mouseup", endDrag);
 
 }, []);
