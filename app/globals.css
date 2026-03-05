@@ -198,8 +198,17 @@ body {
   position:relative;
 
   width:max-content;
+ display:flex;
+  align-items:center;
 
-  animation: filmScroll 40s linear infinite;
+  gap:18px;
+
+  padding:70px 0;
+
+  position:relative;
+
+  width:max-content;
+
   will-change: transform;
 
   background:rgba(0,0,0,0.82);
