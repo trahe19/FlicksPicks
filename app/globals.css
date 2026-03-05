@@ -213,7 +213,11 @@ body {
 .film-wrapper:hover .film-track{
   animation-play-state: paused;
 }
+/* Pause while touching on mobile */
 
+.film-wrapper.touching .film-track{
+  animation-play-state: paused;
+}
 /* Sprocket holes */
 
 .film-track::before,
