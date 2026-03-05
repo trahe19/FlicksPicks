@@ -22,23 +22,66 @@ const oswald = Oswald({
 export default function HomePage() {
 
   useEffect(() => {
-    const wrapper = document.querySelector(".film-wrapper");
 
-    if (!wrapper) return;
+  const track = document.querySelector(".film-track") as HTMLElement;
+  const wrapper = document.querySelector(".film-wrapper") as HTMLElement;
 
-    const start = () => wrapper.classList.add("touching");
-    const end = () => wrapper.classList.remove("touching");
+  if(!track || !wrapper) return;
 
-    wrapper.addEventListener("touchstart", start);
-    wrapper.addEventListener("touchend", end);
-    wrapper.addEventListener("touchcancel", end);
+  let isDragging = false;
+  let startX = 0;
+  let currentTranslate = 0;
 
-    return () => {
-      wrapper.removeEventListener("touchstart", start);
-      wrapper.removeEventListener("touchend", end);
-      wrapper.removeEventListener("touchcancel", end);
-    };
-  }, []);
+  const pause = () => track.style.animationPlayState = "paused";
+  const resume = () => track.style.animationPlayState = "running";
+
+  const startDrag = (x:number) => {
+    isDragging = true;
+    startX = x;
+    pause();
+  };
+
+  const moveDrag = (x:number) => {
+
+    if(!isDragging) return;
+
+    const diff = x - startX;
+
+    track.style.transform = `translateX(${currentTranslate + diff}px)`;
+
+  };
+
+  const endDrag = () => {
+
+    if(!isDragging) return;
+
+    const matrix = window.getComputedStyle(track).transform;
+
+    if(matrix !== "none"){
+
+      const values = matrix.split(",");
+      currentTranslate = parseFloat(values[4]);
+
+    }
+
+    isDragging = false;
+
+    resume();
+  };
+
+  /* Touch */
+
+  wrapper.addEventListener("touchstart", e => startDrag(e.touches[0].clientX));
+  wrapper.addEventListener("touchmove", e => moveDrag(e.touches[0].clientX));
+  wrapper.addEventListener("touchend", endDrag);
+
+  /* Mouse */
+
+  wrapper.addEventListener("mousedown", e => startDrag(e.clientX));
+  window.addEventListener("mousemove", e => moveDrag(e.clientX));
+  window.addEventListener("mouseup", endDrag);
+
+}, []);
 
   return (
     <>
