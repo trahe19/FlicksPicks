@@ -168,9 +168,10 @@ window.addEventListener("mousemove", (e) => {
             How It Works
           </h2>
 
-       <div className="film-wrapper">
-  <div className="projector-light"></div>
-  <div className="vignette"></div>
+    <div className="film-wrapper">
+
+  <div className="projector-beam"></div>
+      
   <div className="vignette"></div>
 
             <div className="grain"></div>
