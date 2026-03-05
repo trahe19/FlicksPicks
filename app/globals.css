@@ -200,11 +200,15 @@ body {
   width:max-content;
 
   animation: filmScroll 40s linear infinite;
+  will-change: transform;
 
   background:rgba(0,0,0,0.82);
 
   backdrop-filter: blur(2px);
 
+}
+.film-track.dragging{
+  animation:none;
 }
 
 /* Desktop hover pause */
