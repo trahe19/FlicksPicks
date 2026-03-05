@@ -481,44 +481,39 @@ body {
 }
 
 /* ============================= */
-/* PROJECTOR LIGHT */
+/* PROJECTOR LIGHT OVERLAY */
 /* ============================= */
 
-.projector-beam{
+.projector-overlay{
 
   position:absolute;
 
-  inset:-40%;
+  inset:0;
 
   pointer-events:none;
 
-  z-index:2;
+  z-index:20;
 
   background:
-  radial-gradient(
-    ellipse at center,
-    rgba(255,255,255,0.22) 0%,
-    rgba(255,255,255,0.12) 25%,
-    rgba(255,255,255,0.05) 45%,
-    rgba(255,255,255,0.02) 60%,
-    transparent 75%
-  );
+    radial-gradient(
+      ellipse at center,
+      rgba(255,255,255,0.25) 0%,
+      rgba(255,255,255,0.12) 20%,
+      rgba(255,255,255,0.06) 40%,
+      rgba(255,255,255,0.02) 55%,
+      transparent 70%
+    );
 
-  mix-blend-mode:screen;
+  animation: projectorFlicker 0.18s infinite;
 
 }
-
-/* ============================= */
-/* PROJECTOR FLICKER */
-/* ============================= */
 
 @keyframes projectorFlicker{
 
   0%{opacity:1}
-  48%{opacity:0.96}
-  50%{opacity:0.90}
+  48%{opacity:0.95}
+  50%{opacity:0.88}
   52%{opacity:0.97}
   100%{opacity:1}
 
 }
-
