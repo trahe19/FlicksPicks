@@ -186,19 +186,19 @@ window.addEventListener("mousemove", (e) => {
               <div className="film-frame">
                 <div className="act">ACT II</div>
                 <h3 className={orbitron.className}>Score</h3>
-                <p>Films score FlicksPoints from box-office profit and critic reception.</p>
+                <p>Films score FlicksPoints from box-office profit, critic ratings, and audience reception.</p>
               </div>
 
               <div className="film-frame">
                 <div className="act">ACT III</div>
                 <h3 className={orbitron.className}>Matchups</h3>
-                <p>Each month your starters face another team head-to-head.</p>
+                <p>Each month your starters face another team head-to-head. Wins get you into the Academy Cup championship. </p>
               </div>
 
               <div className="film-frame">
                 <div className="act">ACT IV</div>
                 <h3 className={orbitron.className}>Academy Cup</h3>
-                <p>The season culminates on Oscar night with championship FlicksPoints.</p>
+                <p>The season culminates on Oscar night. When your roster wins Oscars, you earn championship FlicksPoints.</p>
               </div>
 
               {/* DUPLICATE SET FOR INFINITE LOOP */}
@@ -212,19 +212,19 @@ window.addEventListener("mousemove", (e) => {
               <div className="film-frame">
                 <div className="act">ACT II</div>
                 <h3 className={orbitron.className}>Score</h3>
-                <p>Films score FlicksPoints from box-office profit and critic reception.</p>
+                <p>Films score FlicksPoints from box-office profit, critic ratings, and audience reception.</p>
               </div>
 
               <div className="film-frame">
                 <div className="act">ACT III</div>
                 <h3 className={orbitron.className}>Matchups</h3>
-                <p>Each month your starters face another team head-to-head.</p>
+                <p>Each month your starters face another team head-to-head. Wins get you into the Academy Cup championship.</p>
               </div>
 
               <div className="film-frame">
                 <div className="act">ACT IV</div>
                 <h3 className={orbitron.className}>Academy Cup</h3>
-                <p>The season culminates on Oscar night with championship FlicksPoints.</p>
+                <p>The season culminates on Oscar night. When your roster wins Oscars, you earn championship FlicksPoints.</p>
               </div>
 
             </div>
