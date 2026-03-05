@@ -231,7 +231,12 @@ window.addEventListener("mousemove", (e) => {
             </div>
           </div>
         </section>
-
+        <a
+  href="/join"
+  className={`mt-24 mb-12 bg-white text-black px-16 py-6 rounded-full text-3xl tracking-[0.25em] hover:scale-110 transition duration-300 shadow-[0_0_80px_rgba(255,255,255,0.7)] ${oswald.className}`}
+>
+  Join The Waitlist
+</a>
       </main>
     </>
   );
