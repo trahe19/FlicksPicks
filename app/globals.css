@@ -506,32 +506,12 @@ body {
 
   mix-blend-mode:screen;
 
-  animation: projectorFlicker 0.18s infinite;
-
 }
 
-  mix-blend-mode:screen;
-
-}
 /* ============================= */
 /* PROJECTOR FLICKER */
 /* ============================= */
 
-@keyframes projectorFlicker {
-
-  0% { opacity:1 }
-  48% { opacity:0.985 }
-  50% { opacity:0.96 }
-  52% { opacity:0.99 }
-  100% { opacity:1 }
-
-}
-
-.projector-beam {
-
-  animation: projectorFlicker 0.22s infinite;
-
-}
 @keyframes projectorFlicker{
 
   0%{opacity:1}
