@@ -13,7 +13,6 @@ const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["500", "700"],
 });
-
 const oswald = Oswald({
   subsets: ["latin"],
   weight: ["500", "700"],
