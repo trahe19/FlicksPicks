@@ -30,5 +30,12 @@ export default function RootLayout({
         {children}
       </body>
     </html>
+
+    export const metadata = {
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-touch-icon.png",
+  },
+};
   )
 }
