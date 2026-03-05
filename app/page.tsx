@@ -231,7 +231,6 @@ window.addEventListener("mousemove", (e) => {
             </div>
           </div>
         </section>
-        <a
  <a
   href="/join"
   className={`mt-16 mb-20 bg-white text-black px-16 py-6 rounded-full text-2xl tracking-widest hover:scale-110 transition duration-300 shadow-[0_0_60px_rgba(255,255,255,0.6)] ${oswald.className}`}
