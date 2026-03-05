@@ -15,7 +15,11 @@ export const metadata = {
   title: "FlicksPicks",
   description: "The World's First Fantasy Film League Platform.",
   icons: {
-    icon: [{ url: "/fp-icon.png", sizes: "32x32", type: "image/png" }],
+    icon: [
+      { url: "/fp-icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/fp-icon.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 }
 
@@ -30,12 +34,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-}
-    export const metadata = {
-  icons: {
-    icon: "/icon.png",
-    apple: "/apple-touch-icon.png",
-  },
-};
   )
 }
