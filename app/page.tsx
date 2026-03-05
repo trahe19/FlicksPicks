@@ -143,7 +143,10 @@ export default function HomePage() {
             How It Works
           </h2>
 
-          <div className="film-wrapper">
+       <div className="film-wrapper">
+  <div className="projector-light"></div>
+  <div className="vignette"></div>
+  <div className="vignette"></div>
 
             <div className="grain"></div>
 
