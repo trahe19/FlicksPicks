@@ -192,13 +192,13 @@ window.addEventListener("mousemove", (e) => {
               <div className="film-frame">
                 <div className="act">ACT III</div>
                 <h3 className={orbitron.className}>Matchups</h3>
-                <p>Each month your starters face another team head-to-head. Wins get you into the Academy Cup championship. </p>
+                <p>Each month your starters face another team head-to-head. Wins get you into the Academy Cup. </p>
               </div>
 
               <div className="film-frame">
                 <div className="act">ACT IV</div>
                 <h3 className={orbitron.className}>Academy Cup</h3>
-                <p>The season culminates on Oscar night. When your roster wins Oscars, you earn championship FlicksPoints.</p>
+                <p>The season culminates on Oscar night. Win the most Oscars, win the Academy Cup. </p>
               </div>
 
               {/* DUPLICATE SET FOR INFINITE LOOP */}
@@ -218,13 +218,13 @@ window.addEventListener("mousemove", (e) => {
               <div className="film-frame">
                 <div className="act">ACT III</div>
                 <h3 className={orbitron.className}>Matchups</h3>
-                <p>Each month your starters face another team head-to-head. Wins get you into the Academy Cup championship.</p>
+                <p>Each month your starters face another team head-to-head. Wins get you into the Academy Cup.</p>
               </div>
 
               <div className="film-frame">
                 <div className="act">ACT IV</div>
                 <h3 className={orbitron.className}>Academy Cup</h3>
-                <p>The season culminates on Oscar night. When your roster wins Oscars, you earn championship FlicksPoints.</p>
+                <p>The season culminates on Oscar night. Win the most Oscars, win the Academy Cup.</p>
               </div>
 
             </div>
