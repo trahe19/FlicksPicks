@@ -24,7 +24,7 @@ export default function HomePage() {
  <div className="background-light light-left" /> 
  <div className="background-light light-right" /> 
 
-    <main className="relative z-10 min-h-screen flex flex-col items-center justify-start px-6 pt-32 pb-40 text-center text-white">
+<main className="relative z-10 min-h-screen flex flex-col items-center justify-start pt-32 pb-40 text-center text-white">
 
   {/* Top Right CTA */}
   <div className="absolute top-8 right-8">
