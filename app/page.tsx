@@ -113,7 +113,7 @@ window.addEventListener("mousemove", (e) => {
       <div className="background-light light-left" />
       <div className="background-light light-right" />
 
-      <main className="relative z-10 min-h-screen flex flex-col items-center justify-start pt-32 pb-20 text-center text-white">
+      <main className="relative z-10 min-h-screen flex flex-col items-center justify-start pt-32 pb-16 text-center text-white">
         <div className="absolute top-8 right-8">
           <a
             href="/join"
