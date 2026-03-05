@@ -399,22 +399,6 @@ body {
     inset 0 0 100px rgba(0,0,0,0.55),
     inset 0 0 40px rgba(0,0,0,0.35);
 
-}
-/* ============================= */
-/* PROJECTOR FLICKER */
-/* ============================= */
-
-@keyframes projectorFlicker{
-
-  0% { opacity:1 }
-  50% { opacity:0.985 }
-  100% { opacity:1 }
-
-}
-
-.film-wrapper{
-  animation:projectorFlicker 0.25s infinite;
-}
 
 /* Scroll animation */
 
@@ -489,9 +473,11 @@ body {
 
 }
 
-/* PROJECTOR LIGHT */
+/* ============================= */
+/* PROJECTOR LIGHT BEAM */
+/* ============================= */
 
-.projector-light{
+.projector-beam {
 
   position:absolute;
 
@@ -505,9 +491,30 @@ body {
   radial-gradient(
     ellipse at center,
     rgba(255,255,255,0.18) 0%,
-    rgba(255,255,255,0.08) 30%,
-    rgba(255,255,255,0.03) 50%,
+    rgba(255,255,255,0.10) 25%,
+    rgba(255,255,255,0.04) 45%,
     transparent 70%
   );
+
+  mix-blend-mode:screen;
+
+}
+/* ============================= */
+/* PROJECTOR FLICKER */
+/* ============================= */
+
+@keyframes projectorFlicker {
+
+  0% { opacity:1 }
+  48% { opacity:0.985 }
+  50% { opacity:0.96 }
+  52% { opacity:0.99 }
+  100% { opacity:1 }
+
+}
+
+.projector-beam {
+
+  animation: projectorFlicker 0.22s infinite;
 
 }
