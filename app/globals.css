@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ensure main content stays above film effects */
+
+main{
+  position:relative;
+  z-index:10;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -474,27 +481,34 @@ body {
 }
 
 /* ============================= */
-/* PROJECTOR LIGHT BEAM */
+/* PROJECTOR LIGHT */
 /* ============================= */
 
-.projector-beam {
+.projector-beam{
 
   position:absolute;
 
-  inset:0;
+  inset:-40%;
 
   pointer-events:none;
 
-  z-index:1;
+  z-index:2;
 
   background:
   radial-gradient(
     ellipse at center,
-    rgba(255,255,255,0.18) 0%,
-    rgba(255,255,255,0.10) 25%,
-    rgba(255,255,255,0.04) 45%,
-    transparent 70%
+    rgba(255,255,255,0.22) 0%,
+    rgba(255,255,255,0.12) 25%,
+    rgba(255,255,255,0.05) 45%,
+    rgba(255,255,255,0.02) 60%,
+    transparent 75%
   );
+
+  mix-blend-mode:screen;
+
+  animation: projectorFlicker 0.18s infinite;
+
+}
 
   mix-blend-mode:screen;
 
@@ -518,3 +532,13 @@ body {
   animation: projectorFlicker 0.22s infinite;
 
 }
+@keyframes projectorFlicker{
+
+  0%{opacity:1}
+  48%{opacity:0.96}
+  50%{opacity:0.90}
+  52%{opacity:0.97}
+  100%{opacity:1}
+
+}
+
