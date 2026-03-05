@@ -21,68 +21,60 @@ const oswald = Oswald({
 
 export default function HomePage() {
 
-  useEffect(() => {
+ useEffect(() => {
 
   const track = document.querySelector(".film-track") as HTMLElement;
   const wrapper = document.querySelector(".film-wrapper") as HTMLElement;
 
   if(!track || !wrapper) return;
 
-  let isDragging = false;
   let startX = 0;
-  let currentTranslate = 0;
+  let currentX = 0;
+  let dragging = false;
 
-  const pause = () => track.style.animationPlayState = "paused";
-  const resume = () => track.style.animationPlayState = "running";
+  const start = (x:number) => {
 
-  const startDrag = (x:number) => {
-    isDragging = true;
+    dragging = true;
     startX = x;
-    pause();
-  };
 
-  const moveDrag = (x:number) => {
-
-    if(!isDragging) return;
-
-    const diff = x - startX;
-
-    track.style.transform = `translateX(${currentTranslate + diff}px)`;
+    track.classList.add("dragging");
 
   };
 
-  const endDrag = () => {
+  const move = (x:number) => {
 
-    if(!isDragging) return;
+    if(!dragging) return;
 
-    const matrix = window.getComputedStyle(track).transform;
+    const dx = x - startX;
 
-    if(matrix !== "none"){
+    track.style.transform = `translateX(${currentX + dx}px)`;
 
-      const values = matrix.split(",");
-      currentTranslate = parseFloat(values[4]);
-
-    }
-
-    isDragging = false;
-
-    resume();
   };
 
-  /* Touch */
+  const end = () => {
 
-  wrapper.addEventListener("touchstart", e => startDrag(e.touches[0].clientX));
-  wrapper.addEventListener("touchmove", e => moveDrag(e.touches[0].clientX));
-  wrapper.addEventListener("touchend", endDrag);
+    if(!dragging) return;
 
-  /* Mouse */
+    const matrix = new DOMMatrix(getComputedStyle(track).transform);
 
-  wrapper.addEventListener("mousedown", e => startDrag(e.clientX));
-  window.addEventListener("mousemove", e => moveDrag(e.clientX));
-  window.addEventListener("mouseup", endDrag);
+    currentX = matrix.m41;
+
+    dragging = false;
+
+    track.classList.remove("dragging");
+
+  };
+
+  wrapper.addEventListener("touchstart", e => start(e.touches[0].clientX));
+  wrapper.addEventListener("touchmove", e => move(e.touches[0].clientX));
+  wrapper.addEventListener("touchend", end);
+
+  wrapper.addEventListener("mousedown", e => start(e.clientX));
+  window.addEventListener("mousemove", e => move(e.clientX));
+  window.addEventListener("mouseup", end);
 
 }, []);
-
+  
   return (
     <>
       <div className="background-light light-left" />
