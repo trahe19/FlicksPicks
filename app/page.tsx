@@ -128,16 +128,16 @@ window.addEventListener("mousemove", (e) => {
         <div className="curtain-right" />
         <div className="film-flash" />
 
-        <div className="relative mb-12 flex justify-center items-center">
-          <Image
-            src="/fp-wordmark2.png"
-            alt="FlicksPicks Logo"
-            width={650}
-            height={250}
-            priority
-            className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,1)]"
-          />
-        </div>
+      <div className="relative mb-12 flex justify-center items-center px-6 md:px-0">
+  <Image
+    src="/fp-wordmark2.png"
+    alt="FlicksPicks Logo"
+    width={650}
+    height={250}
+    priority
+    className="animate-logoZoom invert brightness-150 contrast-125 drop-shadow-[0_0_150px_rgba(0,255,255,1)] w-full max-w-[650px]"
+  />
+</div>
 
         <p className={`text-2xl md:text-3xl max-w-3xl mb-16 text-gray-300 tracking-widest uppercase animate-fadeUp delay-300 ${oswald.className}`}>
           The world's first fantasy film league platform
