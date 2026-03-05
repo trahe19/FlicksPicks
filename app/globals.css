@@ -201,23 +201,24 @@ body {
 
   width:max-content;
 
-  left:50%;
-  transform:translateX(-50%);
-
   animation:filmScroll 40s linear infinite;
 
 }
 
-/* Pause on hover */
+/* Desktop hover pause */
 
-.film-wrapper:hover .film-track{
-  animation-play-state: paused;
+@media (hover:hover){
+  .film-wrapper:hover .film-track{
+    animation-play-state: paused;
+  }
 }
-/* Pause while touching on mobile */
+
+/* Mobile press pause */
 
 .film-wrapper.touching .film-track{
   animation-play-state: paused;
 }
+
 /* Sprocket holes */
 
 .film-track::before,
@@ -273,7 +274,7 @@ body {
   justify-content:center;
 
   text-align:center;
-
+  flex-shrink:0;
 }
 
 .act{
@@ -312,12 +313,12 @@ body {
 
 @keyframes filmScroll{
 
-  0%{
-    transform:translateX(-30%);
+  from{
+    transform:translateX(0);
   }
 
-  100%{
-    transform:translateX(-80%);
+  to{
+    transform:translateX(-50%);
   }
 
 }
