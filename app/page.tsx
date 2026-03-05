@@ -21,57 +21,78 @@ const oswald = Oswald({
 
 export default function HomePage() {
 
- useEffect(() => {
+useEffect(() => {
 
   const track = document.querySelector(".film-track") as HTMLElement;
-  const wrapper = document.querySelector(".film-wrapper") as HTMLElement;
 
-  if(!track || !wrapper) return;
+  if(!track) return;
 
-  let startX = 0;
-  let currentX = 0;
+  let position = 0;
+  let speed = 0.25;
   let dragging = false;
+  let startX = 0;
 
-  const start = (x:number) => {
+  const frames = track.children.length;
+  const frameWidth = (track.children[0] as HTMLElement).offsetWidth + 18;
+
+  const loopWidth = frameWidth * (frames / 2);
+
+  const animate = () => {
+
+    if(!dragging){
+      position -= speed;
+    }
+
+    if(position <= -loopWidth){
+      position += loopWidth;
+    }
+
+    if(position >= 0){
+      position -= loopWidth;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+
+    requestAnimationFrame(animate);
+
+  };
+
+  animate();
+
+  const startDrag = (x:number) => {
 
     dragging = true;
     startX = x;
 
-    track.classList.add("dragging");
-
   };
 
-  const move = (x:number) => {
+  const moveDrag = (x:number) => {
 
     if(!dragging) return;
 
     const dx = x - startX;
 
-    track.style.transform = `translateX(${currentX + dx}px)`;
+    position += dx;
+
+    startX = x;
 
   };
 
-  const end = () => {
-
-    if(!dragging) return;
-
-    const matrix = new DOMMatrix(getComputedStyle(track).transform);
-
-    currentX = matrix.m41;
+  const endDrag = () => {
 
     dragging = false;
 
-    track.classList.remove("dragging");
-
   };
 
-  wrapper.addEventListener("touchstart", e => start(e.touches[0].clientX));
-  wrapper.addEventListener("touchmove", e => move(e.touches[0].clientX));
-  wrapper.addEventListener("touchend", end);
+  const wrapper = document.querySelector(".film-wrapper");
 
-  wrapper.addEventListener("mousedown", e => start(e.clientX));
-  window.addEventListener("mousemove", e => move(e.clientX));
-  window.addEventListener("mouseup", end);
+  wrapper?.addEventListener("touchstart", e => startDrag(e.touches[0].clientX));
+  wrapper?.addEventListener("touchmove", e => moveDrag(e.touches[0].clientX));
+  wrapper?.addEventListener("touchend", endDrag);
+
+  wrapper?.addEventListener("mousedown", e => startDrag(e.clientX));
+  window.addEventListener("mousemove", e => moveDrag(e.clientX));
+  window.addEventListener("mouseup", endDrag);
 
 }, []);
   
