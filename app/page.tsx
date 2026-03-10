@@ -129,7 +129,7 @@ window.addEventListener("mousemove", (e) => {
 
       <div className="relative mb-12 flex justify-center items-center px-6 md:px-0">
   <Image
-    src="/fp-wordmark2.png"
+    src="/fp-wordmark.png"
     alt="FlicksPicks Logo"
     width={650}
     height={250}
