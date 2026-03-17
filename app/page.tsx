@@ -236,11 +236,14 @@ window.addEventListener("mousemove", (e) => {
 >
   Join The Waitlist
 </a>
+
+        <div className="mt-20 text-sm text-gray-400 flex gap-6">
+  <a href="/terms" className="hover:underline">Terms</a>
+  <a href="/privacy" className="hover:underline">Privacy</a>
+</div>
+        
       </main>
     </>
   );
 }
-<div className="mt-20 text-sm text-gray-400 flex gap-6">
-  <a href="/terms" className="hover:underline">Terms</a>
-  <a href="/privacy" className="hover:underline">Privacy</a>
-</div>
+
