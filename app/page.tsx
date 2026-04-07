@@ -147,7 +147,7 @@ window.addEventListener("mousemove", (e) => {
   <p className="text-xs tracking-widest text-gray-400 mb-2">
     FEATURED BETA ON
   </p>
-  <a href="https://betabound.com/beta-test/flickspicks" target="_blank">
+  <a href="https://betabound.com/flickspicks-private-beta/">
     <img 
       src="/betabound-badge.png" 
       alt="Featured on BetaBound"
