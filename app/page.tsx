@@ -145,7 +145,6 @@ window.addEventListener("mousemove", (e) => {
       {/* BetaBound Badge */}
 <div className="mt-2 mb-10 text-center">
   <p className="text-xs tracking-widest text-gray-400 mb-2">
-    FEATURED ON BETABOUND
   </p>
 
   <a 
