@@ -145,13 +145,19 @@ window.addEventListener("mousemove", (e) => {
       {/* BetaBound Badge */}
 <div className="mt-2 mb-10 text-center">
   <p className="text-xs tracking-widest text-gray-400 mb-2">
-    FEATURED BETA ON
+    FEATURED ON BETABOUND
   </p>
-  <a href="https://betabound.com/flickspicks-private-beta/">
-    <img 
-      src="/betabound-badge.png" 
+
+  <a 
+    href="https://betabound.com/flickspicks-private-beta/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="inline-block"
+  >
+    <img
+      src="https://betabound.com/wp-content/uploads/2024/07/Betabound-Badge-4.png"
       alt="Featured on BetaBound"
-      className="mx-auto w-[180px] opacity-90 hover:opacity-100 transition"
+      className="mx-auto w-[180px] opacity-90 hover:opacity-100 hover:scale-105 transition duration-300"
     />
   </a>
 </div>
