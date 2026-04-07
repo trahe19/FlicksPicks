@@ -142,6 +142,20 @@ window.addEventListener("mousemove", (e) => {
           The world's first fantasy film league platform
         </p>
 
+      {/* BetaBound Badge */}
+<div className="mt-2 mb-10 text-center">
+  <p className="text-xs tracking-widest text-gray-400 mb-2">
+    FEATURED BETA ON
+  </p>
+  <a href="https://betabound.com/beta-test/flickspicks" target="_blank">
+    <img 
+      src="/betabound-badge.png" 
+      alt="Featured on BetaBound"
+      className="mx-auto w-[180px] opacity-90 hover:opacity-100 transition"
+    />
+  </a>
+</div>
+        
         <div className="w-full max-w-3xl mb-20 px-6">
           <div className="relative w-full pb-[56.25%] rounded-2xl overflow-hidden shadow-2xl">
             <iframe
