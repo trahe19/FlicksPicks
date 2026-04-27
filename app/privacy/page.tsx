@@ -82,7 +82,7 @@ export default function PrivacyPage() {
 
       <h2 className="text-2xl mt-8 mb-4">10. Contact Us</h2>
       <p className="mb-6">
-        If you have any questions about this Privacy Policy, you can contact us at: [Insert Contact Email]
+        If you have any questions about this Privacy Policy, you can contact us at: team@flickspicks.com.
       </p>
 
       <p className="mt-12 text-sm text-gray-400">
