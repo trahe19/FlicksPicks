@@ -99,7 +99,7 @@ export default function TermsPage() {
       </p>
 
       <p className="mt-12 text-sm text-gray-400">
-        Last updated: [Insert Date]
+        Last updated: 4/27/2026.
       </p>
     </main>
   );
